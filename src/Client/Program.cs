@@ -20,7 +20,8 @@ namespace Client
             }
 
             // request token
-            var tokenResponse = await client.RequestClientCredentialsTokenAsync(new ClientCredentialsTokenRequest
+            // ユーザを指定しないtokenの取得方法
+            /*var tokenResponse = await client.RequestClientCredentialsTokenAsync(new ClientCredentialsTokenRequest
             {
                 Address = disco.TokenEndpoint,
 
@@ -32,7 +33,26 @@ namespace Client
             {
                 Console.WriteLine(disco.Error);
                 return;
+            }*/
+            // ユーザを指定したtokenの取得方法
+            var tokenResponse = await client.RequestPasswordTokenAsync(new PasswordTokenRequest
+            {
+                Address = disco.TokenEndpoint,
+                ClientId = "ro.client",
+                ClientSecret = "secret",
+
+                UserName = "alice",
+                Password = "password",
+                Scope = "api1"
+            });
+
+            if (tokenResponse.IsError)
+            {
+                Console.WriteLine(tokenResponse.Error);
+                return;
             }
+
+            Console.WriteLine(tokenResponse.Json);
 
             // call API
             client = new HttpClient();
@@ -48,8 +68,6 @@ namespace Client
                 var content = await response.Content.ReadAsStringAsync();
                 Console.WriteLine(JArray.Parse(content));
             }
-
-            Console.WriteLine("Hello World!");
         }
     }
 }
