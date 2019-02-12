@@ -51,6 +51,7 @@ namespace webApp
 
                     options.Scope.Add(IdentityServerConstants.StandardScopes.OpenId);
                     options.Scope.Add(IdentityServerConstants.StandardScopes.Profile);
+                    options.Scope.Add(IdentityServerConstants.StandardScopes.Email);
                     options.Scope.Add("api1");
                     options.Scope.Add("offline_access");
                 });

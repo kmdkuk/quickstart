@@ -16,6 +16,7 @@ namespace IdentityServerAspNetIdentity
             {
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
+                new IdentityResources.Email()
             };
         }
 
@@ -78,6 +79,7 @@ namespace IdentityServerAspNetIdentity
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
+                        IdentityServerConstants.StandardScopes.Email,
                         "api1"
                     },
 
