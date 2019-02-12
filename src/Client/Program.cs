@@ -42,7 +42,7 @@ namespace Client
                 ClientSecret = "secret",
 
                 UserName = "alice",
-                Password = "password",
+                Password = "Pass123$",
                 Scope = "api1"
             });
 
