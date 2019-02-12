@@ -601,3 +601,1057 @@ System.IO.IOException: Failed to bind to address http://127.0.0.1:5000: address 
 2019-02-12 15:38:53.861 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
 2019-02-12 15:38:53.865 +09:00 [INF] Profile service returned the following claim types: sub name given_name family_name website preferred_username
 2019-02-12 15:38:53.866 +09:00 [DBG] End userinfo request
+2019-02-12 16:09:40.668 +09:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-02-12 16:09:40.676 +09:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-02-12 16:09:40.676 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-02-12 16:09:40.684 +09:00 [DBG] Start discovery request
+2019-02-12 16:09:40.848 +09:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2019-02-12 16:09:40.850 +09:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2019-02-12 16:09:40.850 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-02-12 16:09:40.856 +09:00 [DBG] Start key discovery request
+2019-02-12 16:09:41.304 +09:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-02-12 16:09:41.305 +09:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-02-12 16:09:41.306 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-02-12 16:09:41.306 +09:00 [DBG] Start token request.
+2019-02-12 16:09:41.306 +09:00 [DBG] Start client validation
+2019-02-12 16:09:41.307 +09:00 [DBG] Start parsing Basic Authentication secret
+2019-02-12 16:09:41.307 +09:00 [DBG] Start parsing for secret in post body
+2019-02-12 16:09:41.308 +09:00 [DBG] Parser found secret: PostBodySecretParser
+2019-02-12 16:09:41.308 +09:00 [DBG] Secret id found: ro.client
+2019-02-12 16:09:41.308 +09:00 [DBG] client configuration validation for client ro.client succeeded.
+2019-02-12 16:09:41.309 +09:00 [DBG] Secret validator success: HashedSharedSecretValidator
+2019-02-12 16:09:41.309 +09:00 [DBG] Client validation success
+2019-02-12 16:09:41.309 +09:00 [INF] {"ClientId":"ro.client","AuthenticationMethod":"SharedSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLKGMIMJU1LI:00000003","TimeStamp":"2019-02-12T07:09:41.0000000Z","ProcessId":34165,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2019-02-12 16:09:41.310 +09:00 [DBG] Start token request validation
+2019-02-12 16:09:41.324 +09:00 [DBG] Start resource owner password token request validation
+2019-02-12 16:09:41.378 +09:00 [INF] Credentials validated for username: alice
+2019-02-12 16:09:41.378 +09:00 [INF] {"Username":"alice","Provider":null,"ProviderUserId":null,"SubjectId":"dbb0d762-bd7b-4b55-9a8d-13fa8c35d10c","DisplayName":"alice","Endpoint":"Token","Category":"Authentication","Name":"User Login Success","EventType":"Success","Id":1000,"Message":null,"ActivityId":"0HLKGMIMJU1LI:00000003","TimeStamp":"2019-02-12T07:09:41.0000000Z","ProcessId":34165,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLoginSuccessEvent"}
+2019-02-12 16:09:41.381 +09:00 [INF] {"Username":"alice","Provider":null,"ProviderUserId":null,"SubjectId":"dbb0d762-bd7b-4b55-9a8d-13fa8c35d10c","DisplayName":null,"Endpoint":"Token","Category":"Authentication","Name":"User Login Success","EventType":"Success","Id":1000,"Message":null,"ActivityId":"0HLKGMIMJU1LI:00000003","TimeStamp":"2019-02-12T07:09:41.0000000Z","ProcessId":34165,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLoginSuccessEvent"}
+2019-02-12 16:09:41.381 +09:00 [DBG] Resource owner password token request validation success.
+2019-02-12 16:09:41.382 +09:00 [INF] Token request validation success
+{"ClientId":"ro.client","ClientName":null,"GrantType":"password","Scopes":"api1","AuthorizationCode":null,"RefreshToken":null,"UserName":"alice","AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"grant_type":"password","username":"alice","password":"***REDACTED***","scope":"api1","client_id":"ro.client","client_secret":"***REDACTED***"},"$type":"TokenRequestValidationLog"}
+2019-02-12 16:09:41.386 +09:00 [DBG] Getting claims for access token for client: ro.client
+2019-02-12 16:09:41.387 +09:00 [DBG] Getting claims for access token for subject: dbb0d762-bd7b-4b55-9a8d-13fa8c35d10c
+2019-02-12 16:09:41.415 +09:00 [INF] {"ClientId":"ro.client","ClientName":null,"RedirectUri":null,"Endpoint":"Token","SubjectId":"dbb0d762-bd7b-4b55-9a8d-13fa8c35d10c","Scopes":"api1","GrantType":"password","Tokens":[{"TokenType":"access_token","TokenValue":"****bHqA","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLKGMIMJU1LI:00000003","TimeStamp":"2019-02-12T07:09:41.0000000Z","ProcessId":34165,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-02-12 16:09:41.415 +09:00 [DBG] Token request success.
+2019-02-12 16:09:41.515 +09:00 [DBG] Request path /connect/userinfo matched to endpoint type Userinfo
+2019-02-12 16:09:41.516 +09:00 [DBG] Endpoint enabled: Userinfo, successfully created handler: IdentityServer4.Endpoints.UserInfoEndpoint
+2019-02-12 16:09:41.516 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2019-02-12 16:09:41.516 +09:00 [DBG] Start userinfo request
+2019-02-12 16:09:41.517 +09:00 [DBG] Bearer token found in header
+2019-02-12 16:09:41.521 +09:00 [DBG] client configuration validation for client ro.client succeeded.
+2019-02-12 16:09:41.521 +09:00 [DBG] client configuration validation for client ro.client succeeded.
+2019-02-12 16:09:41.527 +09:00 [ERR] Checking for expected scope openid failed
+{"ClientId":null,"ClientName":null,"ValidateLifetime":true,"AccessTokenType":"Jwt","ExpectedScope":"openid","TokenHandle":null,"JwtId":null,"Claims":{"nbf":1549955381,"exp":1549958981,"iss":"http://localhost:5000","aud":["http://localhost:5000/resources","api1"],"client_id":"ro.client","sub":"dbb0d762-bd7b-4b55-9a8d-13fa8c35d10c","auth_time":1549955381,"idp":"local","scope":"api1","amr":"pwd"},"$type":"TokenValidationLog"}
+2019-02-12 16:19:20.819 +09:00 [DBG] Request path /connect/userinfo matched to endpoint type Userinfo
+2019-02-12 16:19:20.824 +09:00 [DBG] Endpoint enabled: Userinfo, successfully created handler: IdentityServer4.Endpoints.UserInfoEndpoint
+2019-02-12 16:19:20.824 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2019-02-12 16:19:20.825 +09:00 [DBG] Start userinfo request
+2019-02-12 16:19:20.827 +09:00 [DBG] Bearer token found in header
+2019-02-12 16:19:20.834 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:19:20.834 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:19:20.844 +09:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2019-02-12 16:19:20.845 +09:00 [DBG] Token validation success
+{"ClientId":null,"ClientName":null,"ValidateLifetime":true,"AccessTokenType":"Jwt","ExpectedScope":"openid","TokenHandle":null,"JwtId":null,"Claims":{"nbf":1549953533,"exp":1549957133,"iss":"http://localhost:5000","aud":["http://localhost:5000/resources","api1"],"client_id":"mvc","sub":"bc588231-24a0-4248-828c-3afa7e0ce847","auth_time":1549953527,"idp":"local","scope":["openid","profile","api1","offline_access"],"amr":"pwd"},"$type":"TokenValidationLog"}
+2019-02-12 16:19:20.845 +09:00 [DBG] Creating userinfo response
+2019-02-12 16:19:20.845 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:19:20.845 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:19:20.846 +09:00 [DBG] Requested claim types: sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at
+2019-02-12 16:19:20.846 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:19:20.851 +09:00 [INF] Profile service returned the following claim types: sub name given_name family_name website preferred_username
+2019-02-12 16:19:20.852 +09:00 [DBG] End userinfo request
+2019-02-12 16:19:38.036 +09:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-02-12 16:19:38.038 +09:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-02-12 16:19:38.039 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-02-12 16:19:38.039 +09:00 [DBG] Start discovery request
+2019-02-12 16:19:38.213 +09:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2019-02-12 16:19:38.214 +09:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2019-02-12 16:19:38.214 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-02-12 16:19:38.214 +09:00 [DBG] Start key discovery request
+2019-02-12 16:19:38.274 +09:00 [DBG] Request path /connect/endsession matched to endpoint type Endsession
+2019-02-12 16:19:38.275 +09:00 [DBG] Endpoint enabled: Endsession, successfully created handler: IdentityServer4.Endpoints.EndSessionEndpoint
+2019-02-12 16:19:38.276 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.EndSessionEndpoint for /connect/endsession
+2019-02-12 16:19:38.284 +09:00 [DBG] Processing signout request for bc588231-24a0-4248-828c-3afa7e0ce847
+2019-02-12 16:19:38.293 +09:00 [DBG] Start end session request validation
+2019-02-12 16:19:38.301 +09:00 [DBG] Start identity token validation
+2019-02-12 16:19:38.304 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:19:38.304 +09:00 [DBG] Client found: mvc / MVC Client
+2019-02-12 16:19:38.308 +09:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2019-02-12 16:19:38.308 +09:00 [DBG] Token validation success
+{"ClientId":"mvc","ClientName":"MVC Client","ValidateLifetime":false,"AccessTokenType":null,"ExpectedScope":null,"TokenHandle":null,"JwtId":null,"Claims":{"nbf":1549953533,"exp":1549953833,"iss":"http://localhost:5000","aud":"mvc","nonce":"636855503077733770.ODA1M2FiNTYtYWNjZC00NmE1LWFkMmYtOTRiZWU0YWEwNDUwNjk3NzgzNWEtZDcwNS00NTc0LThmZTQtOGU1ZWJlMGM4MTU3","iat":1549953533,"at_hash":"rCHK18cPc4I1rEyfKxjNrw","sid":"8e4fc1b0095721642736002c64fdbb58","sub":"bc588231-24a0-4248-828c-3afa7e0ce847","auth_time":1549953527,"idp":"local","amr":"pwd"},"$type":"TokenValidationLog"}
+2019-02-12 16:19:38.312 +09:00 [INF] End session request validation success
+{"ClientId":"mvc","ClientName":"MVC Client","SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","PostLogOutUri":"http://localhost:5002/signout-callback-oidc","State":"CfDJ8BOel7jXsO5El1oGZZifSOvrgTHn-y-0dxH5eGQHyEw5SZ2uUOiIqpDKnaNRC3hD038DOdTe8NgGA3jjTwsChEV8CADN6DifvuEm2lZBpsk7mO1V96Igf78iCNexmH_g_6KtyUqmwHGoYyTZTqojl-npxgCDePIiIfiSw78FA856","Raw":{"post_logout_redirect_uri":"http://localhost:5002/signout-callback-oidc","id_token_hint":"eyJhbGciOiJSUzI1NiIsImtpZCI6IjEwZDk2Mjc0YTcwNTA0MjU1ZGU5YzUzMzRjNTQzYzMzIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1NDk5NTM1MzMsImV4cCI6MTU0OTk1MzgzMywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjoibXZjIiwibm9uY2UiOiI2MzY4NTU1MDMwNzc3MzM3NzAuT0RBMU0yRmlOVFl0WVdOalpDMDBObUUxTFdGa01tWXRPVFJpWldVMFlXRXdORFV3TmprM056Z3pOV0V0WkRjd05TMDBOVGMwTFRobVpUUXRPR1UxWldKbE1HTTRNVFUzIiwiaWF0IjoxNTQ5OTUzNTMzLCJhdF9oYXNoIjoickNISzE4Y1BjNEkxckV5Zkt4ak5ydyIsInNpZCI6IjhlNGZjMWIwMDk1NzIxNjQyNzM2MDAyYzY0ZmRiYjU4Iiwic3ViIjoiYmM1ODgyMzEtMjRhMC00MjQ4LTgyOGMtM2FmYTdlMGNlODQ3IiwiYXV0aF90aW1lIjoxNTQ5OTUzNTI3LCJpZHAiOiJsb2NhbCIsImFtciI6WyJwd2QiXX0.Ws4pRYnNk5T2GI_Ckme6ni4CsNdLoIUXIw9rJc9nPytO2bM-0MMvWn63jJYNiiD1ckwiZS2x7IotKfqwQDczaX_anlsonoAcg0nNa63PlbwUtfVB8iRVOny19UQ-HD0ThEwObAS_YZ-8K16KrJ5Dn1fNdt6N5BXMqriuKy3RnSIiHFZaRZKak99cZobUwWvF0GAflURf_Cbwh8x4_3rBuEZuHqPyXGeaM1_GcQ-6ofWXq8A22xh_uWuggVkIR4bmGiogbtFkQOSsBEjziiNdjTutUaGPz9SopY6MjGFKB8Hd6gaV8L7wrU9WZIwDiWL-2MDmIaVQBYEx1UG7mxQ2-w","state":"CfDJ8BOel7jXsO5El1oGZZifSOvrgTHn-y-0dxH5eGQHyEw5SZ2uUOiIqpDKnaNRC3hD038DOdTe8NgGA3jjTwsChEV8CADN6DifvuEm2lZBpsk7mO1V96Igf78iCNexmH_g_6KtyUqmwHGoYyTZTqojl-npxgCDePIiIfiSw78FA856","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"EndSessionRequestValidationLog"}
+2019-02-12 16:19:38.312 +09:00 [DBG] Success validating end session request from mvc
+2019-02-12 16:19:38.384 +09:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2019-02-12 16:19:38.385 +09:00 [INF] AuthenticationScheme: Identity.External signed out.
+2019-02-12 16:19:38.385 +09:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2019-02-12 16:19:38.386 +09:00 [INF] {"SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","DisplayName":"Bob Smith","Category":"Authentication","Name":"User Logout Success","EventType":"Success","Id":1002,"Message":null,"ActivityId":"0HLKGMIMJU1LM:00000002","TimeStamp":"2019-02-12T07:19:38.0000000Z","ProcessId":34165,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLogoutSuccessEvent"}
+2019-02-12 16:19:38.681 +09:00 [DBG] Request path /connect/endsession/callback matched to endpoint type Endsession
+2019-02-12 16:19:38.684 +09:00 [DBG] Endpoint enabled: Endsession, successfully created handler: IdentityServer4.Endpoints.EndSessionCallbackEndpoint
+2019-02-12 16:19:38.684 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.EndSessionCallbackEndpoint for /connect/endsession/callback
+2019-02-12 16:19:38.695 +09:00 [DBG] Processing signout callback request
+2019-02-12 16:19:38.713 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:19:38.713 +09:00 [DBG] No client front-channel logout URLs
+2019-02-12 16:19:38.714 +09:00 [DBG] No client back-channel logout URLs
+2019-02-12 16:19:38.714 +09:00 [INF] Successful signout callback.
+2019-02-12 16:19:38.714 +09:00 [DBG] No client front-channel iframe urls
+2019-02-12 16:19:38.714 +09:00 [DBG] No client back-channel iframe urls
+2019-02-12 16:19:43.136 +09:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-02-12 16:19:43.137 +09:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-02-12 16:19:43.137 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-02-12 16:19:43.137 +09:00 [DBG] Start authorize request
+2019-02-12 16:19:43.138 +09:00 [DBG] No user present in authorize request
+2019-02-12 16:19:43.138 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:19:43.138 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:19:43.138 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:19:43.138 +09:00 [DBG] No PKCE used.
+2019-02-12 16:19:43.138 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:19:43.139 +09:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","AllowedRedirectUris":["http://localhost:5002/signin-oidc"],"SubjectId":"anonymous","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile api1 offline_access","State":"CfDJ8BOel7jXsO5El1oGZZifSOvHxv7sPi9f2MuRqeIT4yV_hknVw0yueY6St7NrTq5Dw5xE-w91ua3UjDNKfup71ctvChtYLrf7betztv2_3UOA0e1bBRIeqejsNkcRkVdnz16LMBXDgDw2vTnGFXKHHeZdhlMAAROgRhkE2u3r-iVorjtzu3p0cdhZisf0iXCPFnE1L9vfaIRJIpti586iz4rQbUdf_-IngsEm3BOuuM8-BscYrzLTZMKoJ7ET2DR39WTydggq2lXz6fTjzOGr8ubmFECx8PgtH6KYfPBs64HCQp3o_afeCvfbz0AJGycT_buiGu3T-UjZXj4d99pHZKg","UiLocales":null,"Nonce":"636855527830946800.MTUzNTA0NmItMTJkOC00M2UzLThhMzAtNThkMDQzMGY4OTZkOTk3ZmZmZDYtMWYyNy00NzNjLTgzMjgtMjAwYjFlZGI2MjBk","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"mvc","redirect_uri":"http://localhost:5002/signin-oidc","response_type":"code id_token","scope":"openid profile api1 offline_access","response_mode":"form_post","nonce":"636855527830946800.MTUzNTA0NmItMTJkOC00M2UzLThhMzAtNThkMDQzMGY4OTZkOTk3ZmZmZDYtMWYyNy00NzNjLTgzMjgtMjAwYjFlZGI2MjBk","state":"CfDJ8BOel7jXsO5El1oGZZifSOvHxv7sPi9f2MuRqeIT4yV_hknVw0yueY6St7NrTq5Dw5xE-w91ua3UjDNKfup71ctvChtYLrf7betztv2_3UOA0e1bBRIeqejsNkcRkVdnz16LMBXDgDw2vTnGFXKHHeZdhlMAAROgRhkE2u3r-iVorjtzu3p0cdhZisf0iXCPFnE1L9vfaIRJIpti586iz4rQbUdf_-IngsEm3BOuuM8-BscYrzLTZMKoJ7ET2DR39WTydggq2lXz6fTjzOGr8ubmFECx8PgtH6KYfPBs64HCQp3o_afeCvfbz0AJGycT_buiGu3T-UjZXj4d99pHZKg","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-02-12 16:19:43.139 +09:00 [INF] Showing login: User is not authenticated
+2019-02-12 16:19:43.223 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:19:43.223 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:19:43.223 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:19:43.223 +09:00 [DBG] No PKCE used.
+2019-02-12 16:19:43.224 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:19:43.224 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:19:44.078 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:19:44.079 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:19:44.079 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:19:44.079 +09:00 [DBG] No PKCE used.
+2019-02-12 16:19:44.079 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:19:44.079 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:19:52.453 +09:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-02-12 16:19:52.456 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:19:52.456 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:19:52.456 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:19:52.456 +09:00 [DBG] No PKCE used.
+2019-02-12 16:19:52.456 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:19:52.502 +09:00 [DBG] Augmenting SignInContext
+2019-02-12 16:19:52.502 +09:00 [DBG] Adding idp claim with value: local
+2019-02-12 16:19:52.502 +09:00 [DBG] Adding amr claim with value: pwd
+2019-02-12 16:19:52.502 +09:00 [DBG] Adding auth_time claim with value: 1549955992
+2019-02-12 16:19:52.503 +09:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-02-12 16:19:52.505 +09:00 [INF] {"Username":"bob","Provider":null,"ProviderUserId":null,"SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","DisplayName":"bob","Endpoint":"UI","Category":"Authentication","Name":"User Login Success","EventType":"Success","Id":1000,"Message":null,"ActivityId":"0HLKGMIMJU1LM:00000007","TimeStamp":"2019-02-12T07:19:52.0000000Z","ProcessId":34165,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLoginSuccessEvent"}
+2019-02-12 16:19:52.505 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:19:52.526 +09:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2019-02-12 16:19:52.526 +09:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2019-02-12 16:19:52.526 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2019-02-12 16:19:52.526 +09:00 [DBG] Start authorize callback request
+2019-02-12 16:19:52.527 +09:00 [DBG] User in authorize request: bc588231-24a0-4248-828c-3afa7e0ce847
+2019-02-12 16:19:52.527 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:19:52.527 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:19:52.527 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:19:52.527 +09:00 [DBG] No PKCE used.
+2019-02-12 16:19:52.527 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:19:52.528 +09:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","AllowedRedirectUris":["http://localhost:5002/signin-oidc"],"SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile api1 offline_access","State":"CfDJ8BOel7jXsO5El1oGZZifSOvHxv7sPi9f2MuRqeIT4yV_hknVw0yueY6St7NrTq5Dw5xE-w91ua3UjDNKfup71ctvChtYLrf7betztv2_3UOA0e1bBRIeqejsNkcRkVdnz16LMBXDgDw2vTnGFXKHHeZdhlMAAROgRhkE2u3r-iVorjtzu3p0cdhZisf0iXCPFnE1L9vfaIRJIpti586iz4rQbUdf_-IngsEm3BOuuM8-BscYrzLTZMKoJ7ET2DR39WTydggq2lXz6fTjzOGr8ubmFECx8PgtH6KYfPBs64HCQp3o_afeCvfbz0AJGycT_buiGu3T-UjZXj4d99pHZKg","UiLocales":null,"Nonce":"636855527830946800.MTUzNTA0NmItMTJkOC00M2UzLThhMzAtNThkMDQzMGY4OTZkOTk3ZmZmZDYtMWYyNy00NzNjLTgzMjgtMjAwYjFlZGI2MjBk","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"1679a1ca971aa015b3b47bf1fb61177c","Raw":{"client_id":"mvc","redirect_uri":"http://localhost:5002/signin-oidc","response_type":"code id_token","scope":"openid profile api1 offline_access","response_mode":"form_post","nonce":"636855527830946800.MTUzNTA0NmItMTJkOC00M2UzLThhMzAtNThkMDQzMGY4OTZkOTk3ZmZmZDYtMWYyNy00NzNjLTgzMjgtMjAwYjFlZGI2MjBk","state":"CfDJ8BOel7jXsO5El1oGZZifSOvHxv7sPi9f2MuRqeIT4yV_hknVw0yueY6St7NrTq5Dw5xE-w91ua3UjDNKfup71ctvChtYLrf7betztv2_3UOA0e1bBRIeqejsNkcRkVdnz16LMBXDgDw2vTnGFXKHHeZdhlMAAROgRhkE2u3r-iVorjtzu3p0cdhZisf0iXCPFnE1L9vfaIRJIpti586iz4rQbUdf_-IngsEm3BOuuM8-BscYrzLTZMKoJ7ET2DR39WTydggq2lXz6fTjzOGr8ubmFECx8PgtH6KYfPBs64HCQp3o_afeCvfbz0AJGycT_buiGu3T-UjZXj4d99pHZKg","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-02-12 16:19:52.531 +09:00 [DBG] Scopes contains offline_access, consent is required
+2019-02-12 16:19:52.531 +09:00 [INF] Showing consent: User has not yet consented
+2019-02-12 16:19:52.544 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:19:52.544 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:19:52.544 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:19:52.544 +09:00 [DBG] No PKCE used.
+2019-02-12 16:19:52.544 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:19:52.544 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:19:56.093 +09:00 [DBG] CORS request made for path: /consent from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-02-12 16:19:56.096 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:19:56.096 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:19:56.096 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:19:56.096 +09:00 [DBG] No PKCE used.
+2019-02-12 16:19:56.096 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:19:56.097 +09:00 [INF] {"SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","ClientId":"mvc","RequestedScopes":["openid","profile","api1","offline_access"],"GrantedScopes":["openid","profile","api1","offline_access"],"ConsentRemembered":true,"Category":"Grants","Name":"Consent granted","EventType":"Information","Id":4000,"Message":null,"ActivityId":"0HLKGMIMJU1LM:0000000A","TimeStamp":"2019-02-12T07:19:56.0000000Z","ProcessId":34165,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"ConsentGrantedEvent"}
+2019-02-12 16:19:56.098 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:19:56.108 +09:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2019-02-12 16:19:56.109 +09:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2019-02-12 16:19:56.109 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2019-02-12 16:19:56.109 +09:00 [DBG] Start authorize callback request
+2019-02-12 16:19:56.109 +09:00 [DBG] User in authorize request: bc588231-24a0-4248-828c-3afa7e0ce847
+2019-02-12 16:19:56.110 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:19:56.110 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:19:56.110 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:19:56.110 +09:00 [DBG] No PKCE used.
+2019-02-12 16:19:56.110 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:19:56.110 +09:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","AllowedRedirectUris":["http://localhost:5002/signin-oidc"],"SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile api1 offline_access","State":"CfDJ8BOel7jXsO5El1oGZZifSOvHxv7sPi9f2MuRqeIT4yV_hknVw0yueY6St7NrTq5Dw5xE-w91ua3UjDNKfup71ctvChtYLrf7betztv2_3UOA0e1bBRIeqejsNkcRkVdnz16LMBXDgDw2vTnGFXKHHeZdhlMAAROgRhkE2u3r-iVorjtzu3p0cdhZisf0iXCPFnE1L9vfaIRJIpti586iz4rQbUdf_-IngsEm3BOuuM8-BscYrzLTZMKoJ7ET2DR39WTydggq2lXz6fTjzOGr8ubmFECx8PgtH6KYfPBs64HCQp3o_afeCvfbz0AJGycT_buiGu3T-UjZXj4d99pHZKg","UiLocales":null,"Nonce":"636855527830946800.MTUzNTA0NmItMTJkOC00M2UzLThhMzAtNThkMDQzMGY4OTZkOTk3ZmZmZDYtMWYyNy00NzNjLTgzMjgtMjAwYjFlZGI2MjBk","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"1679a1ca971aa015b3b47bf1fb61177c","Raw":{"client_id":"mvc","redirect_uri":"http://localhost:5002/signin-oidc","response_type":"code id_token","scope":"openid profile api1 offline_access","response_mode":"form_post","nonce":"636855527830946800.MTUzNTA0NmItMTJkOC00M2UzLThhMzAtNThkMDQzMGY4OTZkOTk3ZmZmZDYtMWYyNy00NzNjLTgzMjgtMjAwYjFlZGI2MjBk","state":"CfDJ8BOel7jXsO5El1oGZZifSOvHxv7sPi9f2MuRqeIT4yV_hknVw0yueY6St7NrTq5Dw5xE-w91ua3UjDNKfup71ctvChtYLrf7betztv2_3UOA0e1bBRIeqejsNkcRkVdnz16LMBXDgDw2vTnGFXKHHeZdhlMAAROgRhkE2u3r-iVorjtzu3p0cdhZisf0iXCPFnE1L9vfaIRJIpti586iz4rQbUdf_-IngsEm3BOuuM8-BscYrzLTZMKoJ7ET2DR39WTydggq2lXz6fTjzOGr8ubmFECx8PgtH6KYfPBs64HCQp3o_afeCvfbz0AJGycT_buiGu3T-UjZXj4d99pHZKg","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-02-12 16:19:56.113 +09:00 [DBG] Scopes contains offline_access, consent is required
+2019-02-12 16:19:56.113 +09:00 [INF] User consented to scopes: ["openid","profile","api1","offline_access"]
+2019-02-12 16:19:56.113 +09:00 [DBG] User indicated to remember consent for scopes: ["openid","profile","api1","offline_access"]
+2019-02-12 16:19:56.113 +09:00 [DBG] Client allows remembering consent, and consent given. Updating consent store for subject: bc588231-24a0-4248-828c-3afa7e0ce847
+2019-02-12 16:19:56.127 +09:00 [DBG] Creating Hybrid Flow response.
+2019-02-12 16:19:56.145 +09:00 [DBG] Creating Implicit Flow response.
+2019-02-12 16:19:56.145 +09:00 [DBG] Getting claims for identity token for subject: bc588231-24a0-4248-828c-3afa7e0ce847 and client: mvc
+2019-02-12 16:19:56.145 +09:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2019-02-12 16:19:56.168 +09:00 [INF] {"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","Endpoint":"Authorize","SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","Scopes":"openid profile api1 offline_access","GrantType":"hybrid","Tokens":[{"TokenType":"id_token","TokenValue":"****ofmg","$type":"Token"},{"TokenType":"code","TokenValue":"****0419","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLKGMIMJU1LM:0000000B","TimeStamp":"2019-02-12T07:19:56.0000000Z","ProcessId":34165,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-02-12 16:19:56.168 +09:00 [INF] Authorize endpoint response
+{"SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","ClientId":"mvc","RedirectUri":"http://localhost:5002/signin-oidc","State":"CfDJ8BOel7jXsO5El1oGZZifSOvHxv7sPi9f2MuRqeIT4yV_hknVw0yueY6St7NrTq5Dw5xE-w91ua3UjDNKfup71ctvChtYLrf7betztv2_3UOA0e1bBRIeqejsNkcRkVdnz16LMBXDgDw2vTnGFXKHHeZdhlMAAROgRhkE2u3r-iVorjtzu3p0cdhZisf0iXCPFnE1L9vfaIRJIpti586iz4rQbUdf_-IngsEm3BOuuM8-BscYrzLTZMKoJ7ET2DR39WTydggq2lXz6fTjzOGr8ubmFECx8PgtH6KYfPBs64HCQp3o_afeCvfbz0AJGycT_buiGu3T-UjZXj4d99pHZKg","Scope":"openid profile api1 offline_access","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2019-02-12 16:19:56.168 +09:00 [DBG] Augmenting SignInContext
+2019-02-12 16:19:56.169 +09:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-02-12 16:19:56.464 +09:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-02-12 16:19:56.466 +09:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-02-12 16:19:56.466 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-02-12 16:19:56.466 +09:00 [DBG] Start token request.
+2019-02-12 16:19:56.466 +09:00 [DBG] Start client validation
+2019-02-12 16:19:56.466 +09:00 [DBG] Start parsing Basic Authentication secret
+2019-02-12 16:19:56.466 +09:00 [DBG] Start parsing for secret in post body
+2019-02-12 16:19:56.466 +09:00 [DBG] Parser found secret: PostBodySecretParser
+2019-02-12 16:19:56.466 +09:00 [DBG] Secret id found: mvc
+2019-02-12 16:19:56.466 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:19:56.466 +09:00 [DBG] Secret validator success: HashedSharedSecretValidator
+2019-02-12 16:19:56.466 +09:00 [DBG] Client validation success
+2019-02-12 16:19:56.467 +09:00 [INF] {"ClientId":"mvc","AuthenticationMethod":"SharedSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLKGMIMJU1LL:00000003","TimeStamp":"2019-02-12T07:19:56.0000000Z","ProcessId":34165,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2019-02-12 16:19:56.467 +09:00 [DBG] Start token request validation
+2019-02-12 16:19:56.467 +09:00 [DBG] Start validation of authorization code token request
+2019-02-12 16:19:56.480 +09:00 [DBG] Validation of authorization code token request success
+2019-02-12 16:19:56.480 +09:00 [INF] Token request validation success
+{"ClientId":"mvc","ClientName":"MVC Client","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"808d8e98a1caa594de68eaa56fa58a123306649e4c30483d078408c0bdb30419","RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"mvc","client_secret":"***REDACTED***","code":"808d8e98a1caa594de68eaa56fa58a123306649e4c30483d078408c0bdb30419","grant_type":"authorization_code","redirect_uri":"http://localhost:5002/signin-oidc"},"$type":"TokenRequestValidationLog"}
+2019-02-12 16:19:56.480 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:19:56.480 +09:00 [DBG] Getting claims for access token for client: mvc
+2019-02-12 16:19:56.480 +09:00 [DBG] Getting claims for access token for subject: bc588231-24a0-4248-828c-3afa7e0ce847
+2019-02-12 16:19:56.501 +09:00 [DBG] Creating refresh token
+2019-02-12 16:19:56.501 +09:00 [DBG] Setting an absolute lifetime: 2592000
+2019-02-12 16:19:56.514 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:19:56.514 +09:00 [DBG] Getting claims for identity token for subject: bc588231-24a0-4248-828c-3afa7e0ce847 and client: mvc
+2019-02-12 16:19:56.514 +09:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2019-02-12 16:19:56.533 +09:00 [INF] {"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":"openid profile api1 offline_access","GrantType":"authorization_code","Tokens":[{"TokenType":"id_token","TokenValue":"****gpTg","$type":"Token"},{"TokenType":"refresh_token","TokenValue":"****0e96","$type":"Token"},{"TokenType":"access_token","TokenValue":"****60pQ","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLKGMIMJU1LL:00000003","TimeStamp":"2019-02-12T07:19:56.0000000Z","ProcessId":34165,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-02-12 16:19:56.533 +09:00 [DBG] Token request success.
+2019-02-12 16:19:56.542 +09:00 [DBG] Request path /connect/userinfo matched to endpoint type Userinfo
+2019-02-12 16:19:56.542 +09:00 [DBG] Endpoint enabled: Userinfo, successfully created handler: IdentityServer4.Endpoints.UserInfoEndpoint
+2019-02-12 16:19:56.542 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2019-02-12 16:19:56.542 +09:00 [DBG] Start userinfo request
+2019-02-12 16:19:56.543 +09:00 [DBG] Bearer token found in header
+2019-02-12 16:19:56.546 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:19:56.546 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:19:56.548 +09:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2019-02-12 16:19:56.548 +09:00 [DBG] Token validation success
+{"ClientId":null,"ClientName":null,"ValidateLifetime":true,"AccessTokenType":"Jwt","ExpectedScope":"openid","TokenHandle":null,"JwtId":null,"Claims":{"nbf":1549955996,"exp":1549959596,"iss":"http://localhost:5000","aud":["http://localhost:5000/resources","api1"],"client_id":"mvc","sub":"bc588231-24a0-4248-828c-3afa7e0ce847","auth_time":1549955992,"idp":"local","scope":["openid","profile","api1","offline_access"],"amr":"pwd"},"$type":"TokenValidationLog"}
+2019-02-12 16:19:56.549 +09:00 [DBG] Creating userinfo response
+2019-02-12 16:19:56.549 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:19:56.549 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:19:56.549 +09:00 [DBG] Requested claim types: sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at
+2019-02-12 16:19:56.549 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:19:56.551 +09:00 [INF] Profile service returned the following claim types: sub name given_name family_name website preferred_username
+2019-02-12 16:19:56.551 +09:00 [DBG] End userinfo request
+2019-02-12 16:20:03.488 +09:00 [DBG] Request path /connect/userinfo matched to endpoint type Userinfo
+2019-02-12 16:20:03.489 +09:00 [DBG] Endpoint enabled: Userinfo, successfully created handler: IdentityServer4.Endpoints.UserInfoEndpoint
+2019-02-12 16:20:03.489 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2019-02-12 16:20:03.489 +09:00 [DBG] Start userinfo request
+2019-02-12 16:20:03.489 +09:00 [DBG] Bearer token found in header
+2019-02-12 16:20:03.495 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:20:03.495 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:20:03.498 +09:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2019-02-12 16:20:03.498 +09:00 [DBG] Token validation success
+{"ClientId":null,"ClientName":null,"ValidateLifetime":true,"AccessTokenType":"Jwt","ExpectedScope":"openid","TokenHandle":null,"JwtId":null,"Claims":{"nbf":1549955996,"exp":1549959596,"iss":"http://localhost:5000","aud":["http://localhost:5000/resources","api1"],"client_id":"mvc","sub":"bc588231-24a0-4248-828c-3afa7e0ce847","auth_time":1549955992,"idp":"local","scope":["openid","profile","api1","offline_access"],"amr":"pwd"},"$type":"TokenValidationLog"}
+2019-02-12 16:20:03.498 +09:00 [DBG] Creating userinfo response
+2019-02-12 16:20:03.498 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:20:03.498 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:20:03.498 +09:00 [DBG] Requested claim types: sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at
+2019-02-12 16:20:03.498 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:20:03.502 +09:00 [INF] Profile service returned the following claim types: sub name given_name family_name website preferred_username
+2019-02-12 16:20:03.502 +09:00 [DBG] End userinfo request
+2019-02-12 16:22:12.607 +09:00 [DBG] Request path /connect/userinfo matched to endpoint type Userinfo
+2019-02-12 16:22:12.608 +09:00 [DBG] Endpoint enabled: Userinfo, successfully created handler: IdentityServer4.Endpoints.UserInfoEndpoint
+2019-02-12 16:22:12.608 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2019-02-12 16:22:12.608 +09:00 [DBG] Start userinfo request
+2019-02-12 16:22:12.608 +09:00 [DBG] Bearer token found in header
+2019-02-12 16:22:12.613 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:22:12.613 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:22:12.617 +09:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2019-02-12 16:22:12.617 +09:00 [DBG] Token validation success
+{"ClientId":null,"ClientName":null,"ValidateLifetime":true,"AccessTokenType":"Jwt","ExpectedScope":"openid","TokenHandle":null,"JwtId":null,"Claims":{"nbf":1549955996,"exp":1549959596,"iss":"http://localhost:5000","aud":["http://localhost:5000/resources","api1"],"client_id":"mvc","sub":"bc588231-24a0-4248-828c-3afa7e0ce847","auth_time":1549955992,"idp":"local","scope":["openid","profile","api1","offline_access"],"amr":"pwd"},"$type":"TokenValidationLog"}
+2019-02-12 16:22:12.617 +09:00 [DBG] Creating userinfo response
+2019-02-12 16:22:12.617 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:22:12.617 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:22:12.618 +09:00 [DBG] Requested claim types: sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at
+2019-02-12 16:22:12.618 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:22:12.622 +09:00 [INF] Profile service returned the following claim types: sub name given_name family_name website preferred_username
+2019-02-12 16:22:12.622 +09:00 [DBG] End userinfo request
+2019-02-12 16:22:42.982 +09:00 [DBG] Request path /connect/userinfo matched to endpoint type Userinfo
+2019-02-12 16:22:42.983 +09:00 [DBG] Endpoint enabled: Userinfo, successfully created handler: IdentityServer4.Endpoints.UserInfoEndpoint
+2019-02-12 16:22:42.983 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2019-02-12 16:22:42.983 +09:00 [DBG] Start userinfo request
+2019-02-12 16:22:42.983 +09:00 [DBG] Bearer token not found
+2019-02-12 16:22:42.983 +09:00 [ERR] No access token found.
+2019-02-12 16:22:51.368 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:24:12.674 +09:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-02-12 16:24:12.681 +09:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-02-12 16:24:12.681 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-02-12 16:24:12.681 +09:00 [DBG] Start authorize request
+2019-02-12 16:24:12.682 +09:00 [DBG] No user present in authorize request
+2019-02-12 16:24:12.682 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:24:12.683 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:24:12.683 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:24:12.683 +09:00 [DBG] No PKCE used.
+2019-02-12 16:24:12.684 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:24:12.685 +09:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","AllowedRedirectUris":["http://localhost:5002/signin-oidc"],"SubjectId":"anonymous","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile api1 offline_access","State":"CfDJ8BOel7jXsO5El1oGZZifSOuPtjCrX_Y1_9JhyyBzuy6_RUFAAL-JF9fp61r6tMK0R42yFuJqg8e_n67vWcLAtZ0RvvHi5hQbuhV8CPWLgOkh5n7si77502OBOwG6KbZq8JUcg8-yXB-1n4RUB2EKIBn8anbcomWXsCRcQDbo8ZUHUwlDWWeJQ2fvR4j0sfZlVYsohCTg2qbb_iW40yoMI1oa6YpIerdsHK65xRmKxPf5nYeO4x4bYG1VyoA3YxaUfcJk2itTut-AEDnuhL2NykgaevULR6jNB1ou7zbkC5yfadJvhlldDx4KF90XCQswO6mOR26In5us_oi-zA7zCcY","UiLocales":null,"Nonce":"636855530526583500.Y2JkZDI3ODYtOGZhMy00ZThhLWJhNDctMTlmYzdkMTRmZDc3MWFhMjRmMzktNjc2Ny00NjEwLWIxMmItMGU3YmYxNTY3YzRj","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"mvc","redirect_uri":"http://localhost:5002/signin-oidc","response_type":"code id_token","scope":"openid profile api1 offline_access","response_mode":"form_post","nonce":"636855530526583500.Y2JkZDI3ODYtOGZhMy00ZThhLWJhNDctMTlmYzdkMTRmZDc3MWFhMjRmMzktNjc2Ny00NjEwLWIxMmItMGU3YmYxNTY3YzRj","state":"CfDJ8BOel7jXsO5El1oGZZifSOuPtjCrX_Y1_9JhyyBzuy6_RUFAAL-JF9fp61r6tMK0R42yFuJqg8e_n67vWcLAtZ0RvvHi5hQbuhV8CPWLgOkh5n7si77502OBOwG6KbZq8JUcg8-yXB-1n4RUB2EKIBn8anbcomWXsCRcQDbo8ZUHUwlDWWeJQ2fvR4j0sfZlVYsohCTg2qbb_iW40yoMI1oa6YpIerdsHK65xRmKxPf5nYeO4x4bYG1VyoA3YxaUfcJk2itTut-AEDnuhL2NykgaevULR6jNB1ou7zbkC5yfadJvhlldDx4KF90XCQswO6mOR26In5us_oi-zA7zCcY","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-02-12 16:24:12.685 +09:00 [INF] Showing login: User is not authenticated
+2019-02-12 16:24:12.694 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:24:12.694 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:24:12.695 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:24:12.695 +09:00 [DBG] No PKCE used.
+2019-02-12 16:24:12.695 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:24:12.695 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:24:13.991 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:24:13.991 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:24:13.991 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:24:13.991 +09:00 [DBG] No PKCE used.
+2019-02-12 16:24:13.992 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:24:13.992 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:24:21.489 +09:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-02-12 16:24:21.498 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:24:21.498 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:24:21.498 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:24:21.498 +09:00 [DBG] No PKCE used.
+2019-02-12 16:24:21.499 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:24:21.543 +09:00 [DBG] Augmenting SignInContext
+2019-02-12 16:24:21.543 +09:00 [DBG] Adding idp claim with value: local
+2019-02-12 16:24:21.543 +09:00 [DBG] Adding amr claim with value: pwd
+2019-02-12 16:24:21.543 +09:00 [DBG] Adding auth_time claim with value: 1549956261
+2019-02-12 16:24:21.544 +09:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-02-12 16:24:21.546 +09:00 [INF] {"Username":"bob","Provider":null,"ProviderUserId":null,"SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","DisplayName":"bob","Endpoint":"UI","Category":"Authentication","Name":"User Login Success","EventType":"Success","Id":1000,"Message":null,"ActivityId":"0HLKGMIMJU1LQ:00000007","TimeStamp":"2019-02-12T07:24:21.0000000Z","ProcessId":34165,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLoginSuccessEvent"}
+2019-02-12 16:24:21.546 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:24:21.558 +09:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2019-02-12 16:24:21.559 +09:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2019-02-12 16:24:21.559 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2019-02-12 16:24:21.559 +09:00 [DBG] Start authorize callback request
+2019-02-12 16:24:21.560 +09:00 [DBG] User in authorize request: bc588231-24a0-4248-828c-3afa7e0ce847
+2019-02-12 16:24:21.560 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:24:21.560 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:24:21.560 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:24:21.561 +09:00 [DBG] No PKCE used.
+2019-02-12 16:24:21.561 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:24:21.561 +09:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","AllowedRedirectUris":["http://localhost:5002/signin-oidc"],"SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile api1 offline_access","State":"CfDJ8BOel7jXsO5El1oGZZifSOuPtjCrX_Y1_9JhyyBzuy6_RUFAAL-JF9fp61r6tMK0R42yFuJqg8e_n67vWcLAtZ0RvvHi5hQbuhV8CPWLgOkh5n7si77502OBOwG6KbZq8JUcg8-yXB-1n4RUB2EKIBn8anbcomWXsCRcQDbo8ZUHUwlDWWeJQ2fvR4j0sfZlVYsohCTg2qbb_iW40yoMI1oa6YpIerdsHK65xRmKxPf5nYeO4x4bYG1VyoA3YxaUfcJk2itTut-AEDnuhL2NykgaevULR6jNB1ou7zbkC5yfadJvhlldDx4KF90XCQswO6mOR26In5us_oi-zA7zCcY","UiLocales":null,"Nonce":"636855530526583500.Y2JkZDI3ODYtOGZhMy00ZThhLWJhNDctMTlmYzdkMTRmZDc3MWFhMjRmMzktNjc2Ny00NjEwLWIxMmItMGU3YmYxNTY3YzRj","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"fa4e8eacbc100ca7b05c243882aa4052","Raw":{"client_id":"mvc","redirect_uri":"http://localhost:5002/signin-oidc","response_type":"code id_token","scope":"openid profile api1 offline_access","response_mode":"form_post","nonce":"636855530526583500.Y2JkZDI3ODYtOGZhMy00ZThhLWJhNDctMTlmYzdkMTRmZDc3MWFhMjRmMzktNjc2Ny00NjEwLWIxMmItMGU3YmYxNTY3YzRj","state":"CfDJ8BOel7jXsO5El1oGZZifSOuPtjCrX_Y1_9JhyyBzuy6_RUFAAL-JF9fp61r6tMK0R42yFuJqg8e_n67vWcLAtZ0RvvHi5hQbuhV8CPWLgOkh5n7si77502OBOwG6KbZq8JUcg8-yXB-1n4RUB2EKIBn8anbcomWXsCRcQDbo8ZUHUwlDWWeJQ2fvR4j0sfZlVYsohCTg2qbb_iW40yoMI1oa6YpIerdsHK65xRmKxPf5nYeO4x4bYG1VyoA3YxaUfcJk2itTut-AEDnuhL2NykgaevULR6jNB1ou7zbkC5yfadJvhlldDx4KF90XCQswO6mOR26In5us_oi-zA7zCcY","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-02-12 16:24:21.565 +09:00 [DBG] Scopes contains offline_access, consent is required
+2019-02-12 16:24:21.566 +09:00 [INF] Showing consent: User has not yet consented
+2019-02-12 16:24:21.580 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:24:21.580 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:24:21.580 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:24:21.580 +09:00 [DBG] No PKCE used.
+2019-02-12 16:24:21.580 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:24:21.581 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:24:23.241 +09:00 [DBG] CORS request made for path: /consent from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-02-12 16:24:23.244 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:24:23.244 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:24:23.244 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:24:23.244 +09:00 [DBG] No PKCE used.
+2019-02-12 16:24:23.245 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:24:23.247 +09:00 [INF] {"SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","ClientId":"mvc","RequestedScopes":["openid","profile","api1","offline_access"],"GrantedScopes":["openid","profile","api1","offline_access"],"ConsentRemembered":true,"Category":"Grants","Name":"Consent granted","EventType":"Information","Id":4000,"Message":null,"ActivityId":"0HLKGMIMJU1LQ:0000000A","TimeStamp":"2019-02-12T07:24:23.0000000Z","ProcessId":34165,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"ConsentGrantedEvent"}
+2019-02-12 16:24:23.248 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:24:23.274 +09:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2019-02-12 16:24:23.274 +09:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2019-02-12 16:24:23.274 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2019-02-12 16:24:23.275 +09:00 [DBG] Start authorize callback request
+2019-02-12 16:24:23.275 +09:00 [DBG] User in authorize request: bc588231-24a0-4248-828c-3afa7e0ce847
+2019-02-12 16:24:23.276 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:24:23.276 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:24:23.277 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:24:23.277 +09:00 [DBG] No PKCE used.
+2019-02-12 16:24:23.277 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:24:23.278 +09:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","AllowedRedirectUris":["http://localhost:5002/signin-oidc"],"SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile api1 offline_access","State":"CfDJ8BOel7jXsO5El1oGZZifSOuPtjCrX_Y1_9JhyyBzuy6_RUFAAL-JF9fp61r6tMK0R42yFuJqg8e_n67vWcLAtZ0RvvHi5hQbuhV8CPWLgOkh5n7si77502OBOwG6KbZq8JUcg8-yXB-1n4RUB2EKIBn8anbcomWXsCRcQDbo8ZUHUwlDWWeJQ2fvR4j0sfZlVYsohCTg2qbb_iW40yoMI1oa6YpIerdsHK65xRmKxPf5nYeO4x4bYG1VyoA3YxaUfcJk2itTut-AEDnuhL2NykgaevULR6jNB1ou7zbkC5yfadJvhlldDx4KF90XCQswO6mOR26In5us_oi-zA7zCcY","UiLocales":null,"Nonce":"636855530526583500.Y2JkZDI3ODYtOGZhMy00ZThhLWJhNDctMTlmYzdkMTRmZDc3MWFhMjRmMzktNjc2Ny00NjEwLWIxMmItMGU3YmYxNTY3YzRj","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"fa4e8eacbc100ca7b05c243882aa4052","Raw":{"client_id":"mvc","redirect_uri":"http://localhost:5002/signin-oidc","response_type":"code id_token","scope":"openid profile api1 offline_access","response_mode":"form_post","nonce":"636855530526583500.Y2JkZDI3ODYtOGZhMy00ZThhLWJhNDctMTlmYzdkMTRmZDc3MWFhMjRmMzktNjc2Ny00NjEwLWIxMmItMGU3YmYxNTY3YzRj","state":"CfDJ8BOel7jXsO5El1oGZZifSOuPtjCrX_Y1_9JhyyBzuy6_RUFAAL-JF9fp61r6tMK0R42yFuJqg8e_n67vWcLAtZ0RvvHi5hQbuhV8CPWLgOkh5n7si77502OBOwG6KbZq8JUcg8-yXB-1n4RUB2EKIBn8anbcomWXsCRcQDbo8ZUHUwlDWWeJQ2fvR4j0sfZlVYsohCTg2qbb_iW40yoMI1oa6YpIerdsHK65xRmKxPf5nYeO4x4bYG1VyoA3YxaUfcJk2itTut-AEDnuhL2NykgaevULR6jNB1ou7zbkC5yfadJvhlldDx4KF90XCQswO6mOR26In5us_oi-zA7zCcY","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-02-12 16:24:23.280 +09:00 [DBG] Scopes contains offline_access, consent is required
+2019-02-12 16:24:23.281 +09:00 [INF] User consented to scopes: ["openid","profile","api1","offline_access"]
+2019-02-12 16:24:23.281 +09:00 [DBG] User indicated to remember consent for scopes: ["openid","profile","api1","offline_access"]
+2019-02-12 16:24:23.281 +09:00 [DBG] Client allows remembering consent, and consent given. Updating consent store for subject: bc588231-24a0-4248-828c-3afa7e0ce847
+2019-02-12 16:24:23.288 +09:00 [DBG] Creating Hybrid Flow response.
+2019-02-12 16:24:23.300 +09:00 [DBG] Creating Implicit Flow response.
+2019-02-12 16:24:23.300 +09:00 [DBG] Getting claims for identity token for subject: bc588231-24a0-4248-828c-3afa7e0ce847 and client: mvc
+2019-02-12 16:24:23.300 +09:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2019-02-12 16:24:23.321 +09:00 [INF] {"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","Endpoint":"Authorize","SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","Scopes":"openid profile api1 offline_access","GrantType":"hybrid","Tokens":[{"TokenType":"id_token","TokenValue":"****TJgQ","$type":"Token"},{"TokenType":"code","TokenValue":"****74b6","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLKGMIMJU1LQ:0000000B","TimeStamp":"2019-02-12T07:24:23.0000000Z","ProcessId":34165,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-02-12 16:24:23.321 +09:00 [INF] Authorize endpoint response
+{"SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","ClientId":"mvc","RedirectUri":"http://localhost:5002/signin-oidc","State":"CfDJ8BOel7jXsO5El1oGZZifSOuPtjCrX_Y1_9JhyyBzuy6_RUFAAL-JF9fp61r6tMK0R42yFuJqg8e_n67vWcLAtZ0RvvHi5hQbuhV8CPWLgOkh5n7si77502OBOwG6KbZq8JUcg8-yXB-1n4RUB2EKIBn8anbcomWXsCRcQDbo8ZUHUwlDWWeJQ2fvR4j0sfZlVYsohCTg2qbb_iW40yoMI1oa6YpIerdsHK65xRmKxPf5nYeO4x4bYG1VyoA3YxaUfcJk2itTut-AEDnuhL2NykgaevULR6jNB1ou7zbkC5yfadJvhlldDx4KF90XCQswO6mOR26In5us_oi-zA7zCcY","Scope":"openid profile api1 offline_access","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2019-02-12 16:24:23.322 +09:00 [DBG] Augmenting SignInContext
+2019-02-12 16:24:23.322 +09:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-02-12 16:24:23.467 +09:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-02-12 16:24:23.468 +09:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-02-12 16:24:23.468 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-02-12 16:24:23.468 +09:00 [DBG] Start token request.
+2019-02-12 16:24:23.468 +09:00 [DBG] Start client validation
+2019-02-12 16:24:23.468 +09:00 [DBG] Start parsing Basic Authentication secret
+2019-02-12 16:24:23.468 +09:00 [DBG] Start parsing for secret in post body
+2019-02-12 16:24:23.469 +09:00 [DBG] Parser found secret: PostBodySecretParser
+2019-02-12 16:24:23.469 +09:00 [DBG] Secret id found: mvc
+2019-02-12 16:24:23.469 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:24:23.469 +09:00 [DBG] Secret validator success: HashedSharedSecretValidator
+2019-02-12 16:24:23.469 +09:00 [DBG] Client validation success
+2019-02-12 16:24:23.470 +09:00 [INF] {"ClientId":"mvc","AuthenticationMethod":"SharedSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLKGMIMJU1LU:00000001","TimeStamp":"2019-02-12T07:24:23.0000000Z","ProcessId":34165,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2019-02-12 16:24:23.470 +09:00 [DBG] Start token request validation
+2019-02-12 16:24:23.470 +09:00 [DBG] Start validation of authorization code token request
+2019-02-12 16:24:23.496 +09:00 [DBG] Validation of authorization code token request success
+2019-02-12 16:24:23.497 +09:00 [INF] Token request validation success
+{"ClientId":"mvc","ClientName":"MVC Client","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"1980be543a35b0d3278cf662ba7cb896775f19cc8a8a0ac14a4f5042282074b6","RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"mvc","client_secret":"***REDACTED***","code":"1980be543a35b0d3278cf662ba7cb896775f19cc8a8a0ac14a4f5042282074b6","grant_type":"authorization_code","redirect_uri":"http://localhost:5002/signin-oidc"},"$type":"TokenRequestValidationLog"}
+2019-02-12 16:24:23.497 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:24:23.497 +09:00 [DBG] Getting claims for access token for client: mvc
+2019-02-12 16:24:23.497 +09:00 [DBG] Getting claims for access token for subject: bc588231-24a0-4248-828c-3afa7e0ce847
+2019-02-12 16:24:23.518 +09:00 [DBG] Creating refresh token
+2019-02-12 16:24:23.518 +09:00 [DBG] Setting an absolute lifetime: 2592000
+2019-02-12 16:24:23.529 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:24:23.529 +09:00 [DBG] Getting claims for identity token for subject: bc588231-24a0-4248-828c-3afa7e0ce847 and client: mvc
+2019-02-12 16:24:23.530 +09:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2019-02-12 16:24:23.547 +09:00 [INF] {"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":"openid profile api1 offline_access","GrantType":"authorization_code","Tokens":[{"TokenType":"id_token","TokenValue":"****rxYw","$type":"Token"},{"TokenType":"refresh_token","TokenValue":"****e2b8","$type":"Token"},{"TokenType":"access_token","TokenValue":"****ILHA","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLKGMIMJU1LU:00000001","TimeStamp":"2019-02-12T07:24:23.0000000Z","ProcessId":34165,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-02-12 16:24:23.547 +09:00 [DBG] Token request success.
+2019-02-12 16:24:23.553 +09:00 [DBG] Request path /connect/userinfo matched to endpoint type Userinfo
+2019-02-12 16:24:23.558 +09:00 [DBG] Endpoint enabled: Userinfo, successfully created handler: IdentityServer4.Endpoints.UserInfoEndpoint
+2019-02-12 16:24:23.558 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2019-02-12 16:24:23.558 +09:00 [DBG] Start userinfo request
+2019-02-12 16:24:23.558 +09:00 [DBG] Bearer token found in header
+2019-02-12 16:24:23.563 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:24:23.563 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:24:23.568 +09:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2019-02-12 16:24:23.568 +09:00 [DBG] Token validation success
+{"ClientId":null,"ClientName":null,"ValidateLifetime":true,"AccessTokenType":"Jwt","ExpectedScope":"openid","TokenHandle":null,"JwtId":null,"Claims":{"nbf":1549956263,"exp":1549959863,"iss":"http://localhost:5000","aud":["http://localhost:5000/resources","api1"],"client_id":"mvc","sub":"bc588231-24a0-4248-828c-3afa7e0ce847","auth_time":1549956261,"idp":"local","scope":["openid","profile","api1","offline_access"],"amr":"pwd"},"$type":"TokenValidationLog"}
+2019-02-12 16:24:23.568 +09:00 [DBG] Creating userinfo response
+2019-02-12 16:24:23.568 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:24:23.568 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:24:23.569 +09:00 [DBG] Requested claim types: sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at
+2019-02-12 16:24:23.569 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:24:23.571 +09:00 [INF] Profile service returned the following claim types: sub name given_name family_name website preferred_username
+2019-02-12 16:24:23.571 +09:00 [DBG] End userinfo request
+2019-02-12 16:24:33.552 +09:00 [DBG] Request path /connect/userinfo matched to endpoint type Userinfo
+2019-02-12 16:24:33.553 +09:00 [DBG] Endpoint enabled: Userinfo, successfully created handler: IdentityServer4.Endpoints.UserInfoEndpoint
+2019-02-12 16:24:33.553 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2019-02-12 16:24:33.553 +09:00 [DBG] Start userinfo request
+2019-02-12 16:24:33.553 +09:00 [DBG] Bearer token found in header
+2019-02-12 16:24:33.559 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:24:33.559 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:24:33.561 +09:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2019-02-12 16:24:33.561 +09:00 [DBG] Token validation success
+{"ClientId":null,"ClientName":null,"ValidateLifetime":true,"AccessTokenType":"Jwt","ExpectedScope":"openid","TokenHandle":null,"JwtId":null,"Claims":{"nbf":1549956263,"exp":1549959863,"iss":"http://localhost:5000","aud":["http://localhost:5000/resources","api1"],"client_id":"mvc","sub":"bc588231-24a0-4248-828c-3afa7e0ce847","auth_time":1549956261,"idp":"local","scope":["openid","profile","api1","offline_access"],"amr":"pwd"},"$type":"TokenValidationLog"}
+2019-02-12 16:24:33.561 +09:00 [DBG] Creating userinfo response
+2019-02-12 16:24:33.562 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:24:33.562 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:24:33.562 +09:00 [DBG] Requested claim types: sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at
+2019-02-12 16:24:33.562 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:24:33.566 +09:00 [INF] Profile service returned the following claim types: sub name given_name family_name website preferred_username
+2019-02-12 16:24:33.566 +09:00 [DBG] End userinfo request
+2019-02-12 16:26:46.074 +09:00 [DBG] Request path /connect/userinfo matched to endpoint type Userinfo
+2019-02-12 16:26:46.080 +09:00 [DBG] Endpoint enabled: Userinfo, successfully created handler: IdentityServer4.Endpoints.UserInfoEndpoint
+2019-02-12 16:26:46.080 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2019-02-12 16:26:46.080 +09:00 [DBG] Start userinfo request
+2019-02-12 16:26:46.081 +09:00 [DBG] Bearer token found in header
+2019-02-12 16:26:46.090 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:26:46.090 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:26:46.101 +09:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2019-02-12 16:26:46.102 +09:00 [DBG] Token validation success
+{"ClientId":null,"ClientName":null,"ValidateLifetime":true,"AccessTokenType":"Jwt","ExpectedScope":"openid","TokenHandle":null,"JwtId":null,"Claims":{"nbf":1549956263,"exp":1549959863,"iss":"http://localhost:5000","aud":["http://localhost:5000/resources","api1"],"client_id":"mvc","sub":"bc588231-24a0-4248-828c-3afa7e0ce847","auth_time":1549956261,"idp":"local","scope":["openid","profile","api1","offline_access"],"amr":"pwd"},"$type":"TokenValidationLog"}
+2019-02-12 16:26:46.103 +09:00 [DBG] Creating userinfo response
+2019-02-12 16:26:46.103 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:26:46.103 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:26:46.103 +09:00 [DBG] Requested claim types: sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at
+2019-02-12 16:26:46.104 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:26:46.109 +09:00 [INF] Profile service returned the following claim types: sub name given_name family_name website preferred_username
+2019-02-12 16:26:46.109 +09:00 [DBG] End userinfo request
+2019-02-12 16:29:01.856 +09:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-02-12 16:29:01.860 +09:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-02-12 16:29:01.861 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-02-12 16:29:01.861 +09:00 [DBG] Start discovery request
+2019-02-12 16:29:01.982 +09:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2019-02-12 16:29:01.983 +09:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2019-02-12 16:29:01.983 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-02-12 16:29:01.983 +09:00 [DBG] Start key discovery request
+2019-02-12 16:29:02.025 +09:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-02-12 16:29:02.026 +09:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-02-12 16:29:02.026 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-02-12 16:29:02.026 +09:00 [DBG] Start authorize request
+2019-02-12 16:29:02.026 +09:00 [DBG] No user present in authorize request
+2019-02-12 16:29:02.026 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:29:02.027 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:29:02.027 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:29:02.027 +09:00 [DBG] No PKCE used.
+2019-02-12 16:29:02.027 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:29:02.028 +09:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","AllowedRedirectUris":["http://localhost:5002/signin-oidc"],"SubjectId":"anonymous","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile api1 offline_access","State":"CfDJ8BOel7jXsO5El1oGZZifSOseeF7gYy_uWl7TdE6L3JpBdH89ifgF5nnhcXYgM2TF0u-KxmKJWSEjwUM0Y2VW9mKJpDB7lbD0YE0Jq0AUIghNIW9kn06yndlU7-PIaoh6wAgyhNsrFfjGSSV6afN7do9PVV5Ra7Ms3T-7H3MRFnq0LKE3EMJ2jiDb6YDALWO8GcrnA4A6zkFd2kwgTTIU4M7ndY3CjZG829EuOBxlDWVgqeUyBiikXF2KS7rMCXQOgSZInqPUy-VgHw-ri-4SAG28UKJQsjCfkASPA339iLRqtHIOGjMjxkFb_MRK1DXJAV3QGon7FgEb0q0sI8xJ9FI","UiLocales":null,"Nonce":"636855533420060860.OTJiNTgyNDUtYjZmOC00NzBkLTlhZGMtZTYxOTliYTcyMWRkNGJiMDk0ODctMmI3NS00NWQxLWJmNzktMWY2ODc1ZWMzMjky","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"mvc","redirect_uri":"http://localhost:5002/signin-oidc","response_type":"code id_token","scope":"openid profile api1 offline_access","response_mode":"form_post","nonce":"636855533420060860.OTJiNTgyNDUtYjZmOC00NzBkLTlhZGMtZTYxOTliYTcyMWRkNGJiMDk0ODctMmI3NS00NWQxLWJmNzktMWY2ODc1ZWMzMjky","state":"CfDJ8BOel7jXsO5El1oGZZifSOseeF7gYy_uWl7TdE6L3JpBdH89ifgF5nnhcXYgM2TF0u-KxmKJWSEjwUM0Y2VW9mKJpDB7lbD0YE0Jq0AUIghNIW9kn06yndlU7-PIaoh6wAgyhNsrFfjGSSV6afN7do9PVV5Ra7Ms3T-7H3MRFnq0LKE3EMJ2jiDb6YDALWO8GcrnA4A6zkFd2kwgTTIU4M7ndY3CjZG829EuOBxlDWVgqeUyBiikXF2KS7rMCXQOgSZInqPUy-VgHw-ri-4SAG28UKJQsjCfkASPA339iLRqtHIOGjMjxkFb_MRK1DXJAV3QGon7FgEb0q0sI8xJ9FI","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-02-12 16:29:02.028 +09:00 [INF] Showing login: User is not authenticated
+2019-02-12 16:29:02.039 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:29:02.039 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:29:02.040 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:29:02.040 +09:00 [DBG] No PKCE used.
+2019-02-12 16:29:02.040 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:29:02.041 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:29:10.206 +09:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-02-12 16:29:10.209 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:29:10.209 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:29:10.209 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:29:10.209 +09:00 [DBG] No PKCE used.
+2019-02-12 16:29:10.210 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:29:10.247 +09:00 [DBG] Augmenting SignInContext
+2019-02-12 16:29:10.247 +09:00 [DBG] Adding idp claim with value: local
+2019-02-12 16:29:10.247 +09:00 [DBG] Adding amr claim with value: pwd
+2019-02-12 16:29:10.247 +09:00 [DBG] Adding auth_time claim with value: 1549956550
+2019-02-12 16:29:10.248 +09:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-02-12 16:29:10.250 +09:00 [INF] {"Username":"bob","Provider":null,"ProviderUserId":null,"SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","DisplayName":"bob","Endpoint":"UI","Category":"Authentication","Name":"User Login Success","EventType":"Success","Id":1000,"Message":null,"ActivityId":"0HLKGMIMJU1M2:00000003","TimeStamp":"2019-02-12T07:29:10.0000000Z","ProcessId":34165,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLoginSuccessEvent"}
+2019-02-12 16:29:10.251 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:29:10.265 +09:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2019-02-12 16:29:10.265 +09:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2019-02-12 16:29:10.266 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2019-02-12 16:29:10.266 +09:00 [DBG] Start authorize callback request
+2019-02-12 16:29:10.266 +09:00 [DBG] User in authorize request: bc588231-24a0-4248-828c-3afa7e0ce847
+2019-02-12 16:29:10.266 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:29:10.267 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:29:10.267 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:29:10.267 +09:00 [DBG] No PKCE used.
+2019-02-12 16:29:10.268 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:29:10.268 +09:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","AllowedRedirectUris":["http://localhost:5002/signin-oidc"],"SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile api1 offline_access","State":"CfDJ8BOel7jXsO5El1oGZZifSOseeF7gYy_uWl7TdE6L3JpBdH89ifgF5nnhcXYgM2TF0u-KxmKJWSEjwUM0Y2VW9mKJpDB7lbD0YE0Jq0AUIghNIW9kn06yndlU7-PIaoh6wAgyhNsrFfjGSSV6afN7do9PVV5Ra7Ms3T-7H3MRFnq0LKE3EMJ2jiDb6YDALWO8GcrnA4A6zkFd2kwgTTIU4M7ndY3CjZG829EuOBxlDWVgqeUyBiikXF2KS7rMCXQOgSZInqPUy-VgHw-ri-4SAG28UKJQsjCfkASPA339iLRqtHIOGjMjxkFb_MRK1DXJAV3QGon7FgEb0q0sI8xJ9FI","UiLocales":null,"Nonce":"636855533420060860.OTJiNTgyNDUtYjZmOC00NzBkLTlhZGMtZTYxOTliYTcyMWRkNGJiMDk0ODctMmI3NS00NWQxLWJmNzktMWY2ODc1ZWMzMjky","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"1855a702c57c0fd77dbcb07e52399914","Raw":{"client_id":"mvc","redirect_uri":"http://localhost:5002/signin-oidc","response_type":"code id_token","scope":"openid profile api1 offline_access","response_mode":"form_post","nonce":"636855533420060860.OTJiNTgyNDUtYjZmOC00NzBkLTlhZGMtZTYxOTliYTcyMWRkNGJiMDk0ODctMmI3NS00NWQxLWJmNzktMWY2ODc1ZWMzMjky","state":"CfDJ8BOel7jXsO5El1oGZZifSOseeF7gYy_uWl7TdE6L3JpBdH89ifgF5nnhcXYgM2TF0u-KxmKJWSEjwUM0Y2VW9mKJpDB7lbD0YE0Jq0AUIghNIW9kn06yndlU7-PIaoh6wAgyhNsrFfjGSSV6afN7do9PVV5Ra7Ms3T-7H3MRFnq0LKE3EMJ2jiDb6YDALWO8GcrnA4A6zkFd2kwgTTIU4M7ndY3CjZG829EuOBxlDWVgqeUyBiikXF2KS7rMCXQOgSZInqPUy-VgHw-ri-4SAG28UKJQsjCfkASPA339iLRqtHIOGjMjxkFb_MRK1DXJAV3QGon7FgEb0q0sI8xJ9FI","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-02-12 16:29:10.274 +09:00 [DBG] Scopes contains offline_access, consent is required
+2019-02-12 16:29:10.275 +09:00 [INF] Showing consent: User has not yet consented
+2019-02-12 16:29:10.284 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:29:10.284 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:29:10.284 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:29:10.284 +09:00 [DBG] No PKCE used.
+2019-02-12 16:29:10.284 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:29:10.284 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:29:11.950 +09:00 [DBG] CORS request made for path: /consent from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-02-12 16:29:11.952 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:29:11.952 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:29:11.953 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:29:11.953 +09:00 [DBG] No PKCE used.
+2019-02-12 16:29:11.953 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:29:11.954 +09:00 [INF] {"SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","ClientId":"mvc","RequestedScopes":["openid","profile","api1","offline_access"],"GrantedScopes":["openid","profile","api1","offline_access"],"ConsentRemembered":true,"Category":"Grants","Name":"Consent granted","EventType":"Information","Id":4000,"Message":null,"ActivityId":"0HLKGMIMJU1M2:00000006","TimeStamp":"2019-02-12T07:29:11.0000000Z","ProcessId":34165,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"ConsentGrantedEvent"}
+2019-02-12 16:29:11.955 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:29:11.964 +09:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2019-02-12 16:29:11.964 +09:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2019-02-12 16:29:11.964 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2019-02-12 16:29:11.964 +09:00 [DBG] Start authorize callback request
+2019-02-12 16:29:11.965 +09:00 [DBG] User in authorize request: bc588231-24a0-4248-828c-3afa7e0ce847
+2019-02-12 16:29:11.965 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:29:11.965 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:29:11.965 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:29:11.966 +09:00 [DBG] No PKCE used.
+2019-02-12 16:29:11.966 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:29:11.966 +09:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","AllowedRedirectUris":["http://localhost:5002/signin-oidc"],"SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile api1 offline_access","State":"CfDJ8BOel7jXsO5El1oGZZifSOseeF7gYy_uWl7TdE6L3JpBdH89ifgF5nnhcXYgM2TF0u-KxmKJWSEjwUM0Y2VW9mKJpDB7lbD0YE0Jq0AUIghNIW9kn06yndlU7-PIaoh6wAgyhNsrFfjGSSV6afN7do9PVV5Ra7Ms3T-7H3MRFnq0LKE3EMJ2jiDb6YDALWO8GcrnA4A6zkFd2kwgTTIU4M7ndY3CjZG829EuOBxlDWVgqeUyBiikXF2KS7rMCXQOgSZInqPUy-VgHw-ri-4SAG28UKJQsjCfkASPA339iLRqtHIOGjMjxkFb_MRK1DXJAV3QGon7FgEb0q0sI8xJ9FI","UiLocales":null,"Nonce":"636855533420060860.OTJiNTgyNDUtYjZmOC00NzBkLTlhZGMtZTYxOTliYTcyMWRkNGJiMDk0ODctMmI3NS00NWQxLWJmNzktMWY2ODc1ZWMzMjky","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"1855a702c57c0fd77dbcb07e52399914","Raw":{"client_id":"mvc","redirect_uri":"http://localhost:5002/signin-oidc","response_type":"code id_token","scope":"openid profile api1 offline_access","response_mode":"form_post","nonce":"636855533420060860.OTJiNTgyNDUtYjZmOC00NzBkLTlhZGMtZTYxOTliYTcyMWRkNGJiMDk0ODctMmI3NS00NWQxLWJmNzktMWY2ODc1ZWMzMjky","state":"CfDJ8BOel7jXsO5El1oGZZifSOseeF7gYy_uWl7TdE6L3JpBdH89ifgF5nnhcXYgM2TF0u-KxmKJWSEjwUM0Y2VW9mKJpDB7lbD0YE0Jq0AUIghNIW9kn06yndlU7-PIaoh6wAgyhNsrFfjGSSV6afN7do9PVV5Ra7Ms3T-7H3MRFnq0LKE3EMJ2jiDb6YDALWO8GcrnA4A6zkFd2kwgTTIU4M7ndY3CjZG829EuOBxlDWVgqeUyBiikXF2KS7rMCXQOgSZInqPUy-VgHw-ri-4SAG28UKJQsjCfkASPA339iLRqtHIOGjMjxkFb_MRK1DXJAV3QGon7FgEb0q0sI8xJ9FI","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-02-12 16:29:11.970 +09:00 [DBG] Scopes contains offline_access, consent is required
+2019-02-12 16:29:11.970 +09:00 [INF] User consented to scopes: ["openid","profile","api1","offline_access"]
+2019-02-12 16:29:11.970 +09:00 [DBG] User indicated to remember consent for scopes: ["openid","profile","api1","offline_access"]
+2019-02-12 16:29:11.971 +09:00 [DBG] Client allows remembering consent, and consent given. Updating consent store for subject: bc588231-24a0-4248-828c-3afa7e0ce847
+2019-02-12 16:29:11.982 +09:00 [DBG] Creating Hybrid Flow response.
+2019-02-12 16:29:11.993 +09:00 [DBG] Creating Implicit Flow response.
+2019-02-12 16:29:11.994 +09:00 [DBG] Getting claims for identity token for subject: bc588231-24a0-4248-828c-3afa7e0ce847 and client: mvc
+2019-02-12 16:29:11.994 +09:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2019-02-12 16:29:12.015 +09:00 [INF] {"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","Endpoint":"Authorize","SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","Scopes":"openid profile api1 offline_access","GrantType":"hybrid","Tokens":[{"TokenType":"id_token","TokenValue":"****a5Ow","$type":"Token"},{"TokenType":"code","TokenValue":"****4bef","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLKGMIMJU1M2:00000007","TimeStamp":"2019-02-12T07:29:12.0000000Z","ProcessId":34165,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-02-12 16:29:12.015 +09:00 [INF] Authorize endpoint response
+{"SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","ClientId":"mvc","RedirectUri":"http://localhost:5002/signin-oidc","State":"CfDJ8BOel7jXsO5El1oGZZifSOseeF7gYy_uWl7TdE6L3JpBdH89ifgF5nnhcXYgM2TF0u-KxmKJWSEjwUM0Y2VW9mKJpDB7lbD0YE0Jq0AUIghNIW9kn06yndlU7-PIaoh6wAgyhNsrFfjGSSV6afN7do9PVV5Ra7Ms3T-7H3MRFnq0LKE3EMJ2jiDb6YDALWO8GcrnA4A6zkFd2kwgTTIU4M7ndY3CjZG829EuOBxlDWVgqeUyBiikXF2KS7rMCXQOgSZInqPUy-VgHw-ri-4SAG28UKJQsjCfkASPA339iLRqtHIOGjMjxkFb_MRK1DXJAV3QGon7FgEb0q0sI8xJ9FI","Scope":"openid profile api1 offline_access","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2019-02-12 16:29:12.016 +09:00 [DBG] Augmenting SignInContext
+2019-02-12 16:29:12.016 +09:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-02-12 16:29:12.281 +09:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-02-12 16:29:12.282 +09:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-02-12 16:29:12.282 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-02-12 16:29:12.282 +09:00 [DBG] Start token request.
+2019-02-12 16:29:12.282 +09:00 [DBG] Start client validation
+2019-02-12 16:29:12.282 +09:00 [DBG] Start parsing Basic Authentication secret
+2019-02-12 16:29:12.282 +09:00 [DBG] Start parsing for secret in post body
+2019-02-12 16:29:12.282 +09:00 [DBG] Parser found secret: PostBodySecretParser
+2019-02-12 16:29:12.282 +09:00 [DBG] Secret id found: mvc
+2019-02-12 16:29:12.282 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:29:12.283 +09:00 [DBG] Secret validator success: HashedSharedSecretValidator
+2019-02-12 16:29:12.283 +09:00 [DBG] Client validation success
+2019-02-12 16:29:12.284 +09:00 [INF] {"ClientId":"mvc","AuthenticationMethod":"SharedSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLKGMIMJU1M1:00000003","TimeStamp":"2019-02-12T07:29:12.0000000Z","ProcessId":34165,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2019-02-12 16:29:12.284 +09:00 [DBG] Start token request validation
+2019-02-12 16:29:12.284 +09:00 [DBG] Start validation of authorization code token request
+2019-02-12 16:29:12.303 +09:00 [DBG] Validation of authorization code token request success
+2019-02-12 16:29:12.303 +09:00 [INF] Token request validation success
+{"ClientId":"mvc","ClientName":"MVC Client","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"881b65eb2a7b33264a814f4333c0d4ab8d5c4d2021d53276e9fc16f461284bef","RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"mvc","client_secret":"***REDACTED***","code":"881b65eb2a7b33264a814f4333c0d4ab8d5c4d2021d53276e9fc16f461284bef","grant_type":"authorization_code","redirect_uri":"http://localhost:5002/signin-oidc"},"$type":"TokenRequestValidationLog"}
+2019-02-12 16:29:12.304 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:29:12.304 +09:00 [DBG] Getting claims for access token for client: mvc
+2019-02-12 16:29:12.304 +09:00 [DBG] Getting claims for access token for subject: bc588231-24a0-4248-828c-3afa7e0ce847
+2019-02-12 16:29:12.326 +09:00 [DBG] Creating refresh token
+2019-02-12 16:29:12.326 +09:00 [DBG] Setting an absolute lifetime: 2592000
+2019-02-12 16:29:12.338 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:29:12.338 +09:00 [DBG] Getting claims for identity token for subject: bc588231-24a0-4248-828c-3afa7e0ce847 and client: mvc
+2019-02-12 16:29:12.339 +09:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2019-02-12 16:29:12.360 +09:00 [INF] {"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":"openid profile api1 offline_access","GrantType":"authorization_code","Tokens":[{"TokenType":"id_token","TokenValue":"****h1jg","$type":"Token"},{"TokenType":"refresh_token","TokenValue":"****df4a","$type":"Token"},{"TokenType":"access_token","TokenValue":"****nTVg","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLKGMIMJU1M1:00000003","TimeStamp":"2019-02-12T07:29:12.0000000Z","ProcessId":34165,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-02-12 16:29:12.360 +09:00 [DBG] Token request success.
+2019-02-12 16:29:12.372 +09:00 [DBG] Request path /connect/userinfo matched to endpoint type Userinfo
+2019-02-12 16:29:12.372 +09:00 [DBG] Endpoint enabled: Userinfo, successfully created handler: IdentityServer4.Endpoints.UserInfoEndpoint
+2019-02-12 16:29:12.372 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2019-02-12 16:29:12.373 +09:00 [DBG] Start userinfo request
+2019-02-12 16:29:12.373 +09:00 [DBG] Bearer token found in header
+2019-02-12 16:29:12.376 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:29:12.377 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:29:12.378 +09:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2019-02-12 16:29:12.379 +09:00 [DBG] Token validation success
+{"ClientId":null,"ClientName":null,"ValidateLifetime":true,"AccessTokenType":"Jwt","ExpectedScope":"openid","TokenHandle":null,"JwtId":null,"Claims":{"nbf":1549956552,"exp":1549960152,"iss":"http://localhost:5000","aud":["http://localhost:5000/resources","api1"],"client_id":"mvc","sub":"bc588231-24a0-4248-828c-3afa7e0ce847","auth_time":1549956550,"idp":"local","scope":["openid","profile","api1","offline_access"],"amr":"pwd"},"$type":"TokenValidationLog"}
+2019-02-12 16:29:12.379 +09:00 [DBG] Creating userinfo response
+2019-02-12 16:29:12.379 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:29:12.379 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:29:12.379 +09:00 [DBG] Requested claim types: sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at
+2019-02-12 16:29:12.379 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:29:12.381 +09:00 [INF] Profile service returned the following claim types: sub name given_name family_name website preferred_username
+2019-02-12 16:29:12.381 +09:00 [DBG] End userinfo request
+2019-02-12 16:29:21.800 +09:00 [DBG] Request path /connect/userinfo matched to endpoint type Userinfo
+2019-02-12 16:29:21.801 +09:00 [DBG] Endpoint enabled: Userinfo, successfully created handler: IdentityServer4.Endpoints.UserInfoEndpoint
+2019-02-12 16:29:21.801 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2019-02-12 16:29:21.801 +09:00 [DBG] Start userinfo request
+2019-02-12 16:29:21.801 +09:00 [DBG] Bearer token found in header
+2019-02-12 16:29:21.805 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:29:21.805 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:29:21.807 +09:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2019-02-12 16:29:21.807 +09:00 [DBG] Token validation success
+{"ClientId":null,"ClientName":null,"ValidateLifetime":true,"AccessTokenType":"Jwt","ExpectedScope":"openid","TokenHandle":null,"JwtId":null,"Claims":{"nbf":1549956552,"exp":1549960152,"iss":"http://localhost:5000","aud":["http://localhost:5000/resources","api1"],"client_id":"mvc","sub":"bc588231-24a0-4248-828c-3afa7e0ce847","auth_time":1549956550,"idp":"local","scope":["openid","profile","api1","offline_access"],"amr":"pwd"},"$type":"TokenValidationLog"}
+2019-02-12 16:29:21.807 +09:00 [DBG] Creating userinfo response
+2019-02-12 16:29:21.807 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:29:21.807 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:29:21.807 +09:00 [DBG] Requested claim types: sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at
+2019-02-12 16:29:21.807 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:29:21.811 +09:00 [INF] Profile service returned the following claim types: sub name given_name family_name website preferred_username
+2019-02-12 16:29:21.811 +09:00 [DBG] End userinfo request
+2019-02-12 16:29:54.691 +09:00 [DBG] Request path /connect/userinfo matched to endpoint type Userinfo
+2019-02-12 16:29:54.692 +09:00 [DBG] Endpoint enabled: Userinfo, successfully created handler: IdentityServer4.Endpoints.UserInfoEndpoint
+2019-02-12 16:29:54.692 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2019-02-12 16:29:54.693 +09:00 [DBG] Start userinfo request
+2019-02-12 16:29:54.693 +09:00 [DBG] Bearer token found in header
+2019-02-12 16:29:54.719 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:29:54.719 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:29:54.721 +09:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2019-02-12 16:29:54.721 +09:00 [DBG] Token validation success
+{"ClientId":null,"ClientName":null,"ValidateLifetime":true,"AccessTokenType":"Jwt","ExpectedScope":"openid","TokenHandle":null,"JwtId":null,"Claims":{"nbf":1549956552,"exp":1549960152,"iss":"http://localhost:5000","aud":["http://localhost:5000/resources","api1"],"client_id":"mvc","sub":"bc588231-24a0-4248-828c-3afa7e0ce847","auth_time":1549956550,"idp":"local","scope":["openid","profile","api1","offline_access"],"amr":"pwd"},"$type":"TokenValidationLog"}
+2019-02-12 16:29:54.721 +09:00 [DBG] Creating userinfo response
+2019-02-12 16:29:54.722 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:29:54.722 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:29:54.722 +09:00 [DBG] Requested claim types: sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at
+2019-02-12 16:29:54.722 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:29:54.724 +09:00 [INF] Profile service returned the following claim types: sub name given_name family_name website preferred_username
+2019-02-12 16:29:54.724 +09:00 [DBG] End userinfo request
+2019-02-12 16:30:09.566 +09:00 [DBG] Request path /connect/userinfo matched to endpoint type Userinfo
+2019-02-12 16:30:09.567 +09:00 [DBG] Endpoint enabled: Userinfo, successfully created handler: IdentityServer4.Endpoints.UserInfoEndpoint
+2019-02-12 16:30:09.568 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2019-02-12 16:30:09.568 +09:00 [DBG] Start userinfo request
+2019-02-12 16:30:09.568 +09:00 [DBG] Bearer token found in header
+2019-02-12 16:30:09.573 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:30:09.573 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:30:09.577 +09:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2019-02-12 16:30:09.578 +09:00 [DBG] Token validation success
+{"ClientId":null,"ClientName":null,"ValidateLifetime":true,"AccessTokenType":"Jwt","ExpectedScope":"openid","TokenHandle":null,"JwtId":null,"Claims":{"nbf":1549956552,"exp":1549960152,"iss":"http://localhost:5000","aud":["http://localhost:5000/resources","api1"],"client_id":"mvc","sub":"bc588231-24a0-4248-828c-3afa7e0ce847","auth_time":1549956550,"idp":"local","scope":["openid","profile","api1","offline_access"],"amr":"pwd"},"$type":"TokenValidationLog"}
+2019-02-12 16:30:09.578 +09:00 [DBG] Creating userinfo response
+2019-02-12 16:30:09.578 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:30:09.578 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:30:09.578 +09:00 [DBG] Requested claim types: sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at
+2019-02-12 16:30:09.579 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:30:09.582 +09:00 [INF] Profile service returned the following claim types: sub name given_name family_name website preferred_username
+2019-02-12 16:30:09.582 +09:00 [DBG] End userinfo request
+2019-02-12 16:31:33.961 +09:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-02-12 16:31:33.965 +09:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-02-12 16:31:33.965 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-02-12 16:31:33.965 +09:00 [DBG] Start discovery request
+2019-02-12 16:31:34.066 +09:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2019-02-12 16:31:34.067 +09:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2019-02-12 16:31:34.067 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-02-12 16:31:34.067 +09:00 [DBG] Start key discovery request
+2019-02-12 16:31:34.121 +09:00 [DBG] Request path /connect/endsession matched to endpoint type Endsession
+2019-02-12 16:31:34.123 +09:00 [DBG] Endpoint enabled: Endsession, successfully created handler: IdentityServer4.Endpoints.EndSessionEndpoint
+2019-02-12 16:31:34.123 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.EndSessionEndpoint for /connect/endsession
+2019-02-12 16:31:34.124 +09:00 [DBG] Processing signout request for bc588231-24a0-4248-828c-3afa7e0ce847
+2019-02-12 16:31:34.124 +09:00 [DBG] Start end session request validation
+2019-02-12 16:31:34.124 +09:00 [DBG] Start identity token validation
+2019-02-12 16:31:34.125 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:31:34.125 +09:00 [DBG] Client found: mvc / MVC Client
+2019-02-12 16:31:34.145 +09:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2019-02-12 16:31:34.146 +09:00 [DBG] Token validation success
+{"ClientId":"mvc","ClientName":"MVC Client","ValidateLifetime":false,"AccessTokenType":null,"ExpectedScope":null,"TokenHandle":null,"JwtId":null,"Claims":{"nbf":1549956552,"exp":1549956852,"iss":"http://localhost:5000","aud":"mvc","nonce":"636855533420060860.OTJiNTgyNDUtYjZmOC00NzBkLTlhZGMtZTYxOTliYTcyMWRkNGJiMDk0ODctMmI3NS00NWQxLWJmNzktMWY2ODc1ZWMzMjky","iat":1549956552,"at_hash":"O91lPCAqYfQJqX6-qDtg8Q","sid":"1855a702c57c0fd77dbcb07e52399914","sub":"bc588231-24a0-4248-828c-3afa7e0ce847","auth_time":1549956550,"idp":"local","amr":"pwd"},"$type":"TokenValidationLog"}
+2019-02-12 16:31:34.147 +09:00 [INF] End session request validation success
+{"ClientId":"mvc","ClientName":"MVC Client","SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","PostLogOutUri":"http://localhost:5002/signout-callback-oidc","State":"CfDJ8BOel7jXsO5El1oGZZifSOsG6v7YZxd3iXFm5xo8UcAeX_xc4reb9vcl59SAXxO0i40_DrAdVoeYINHFTtafTVIfMEh8qAQKZ6BW7e9GExir9gnfYoAkHGXCscRxGxGDpdyg5ZtTkuqqzCpxbY1k8niHn6msaYdkRspwVj1HqGdQ","Raw":{"post_logout_redirect_uri":"http://localhost:5002/signout-callback-oidc","id_token_hint":"eyJhbGciOiJSUzI1NiIsImtpZCI6IjEwZDk2Mjc0YTcwNTA0MjU1ZGU5YzUzMzRjNTQzYzMzIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1NDk5NTY1NTIsImV4cCI6MTU0OTk1Njg1MiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjoibXZjIiwibm9uY2UiOiI2MzY4NTU1MzM0MjAwNjA4NjAuT1RKaU5UZ3lORFV0WWpabU9DMDBOekJrTFRsaFpHTXRaVFl4T1RsaVlUY3lNV1JrTkdKaU1EazBPRGN0TW1JM05TMDBOV1F4TFdKbU56a3RNV1kyT0RjMVpXTXpNamt5IiwiaWF0IjoxNTQ5OTU2NTUyLCJhdF9oYXNoIjoiTzkxbFBDQXFZZlFKcVg2LXFEdGc4USIsInNpZCI6IjE4NTVhNzAyYzU3YzBmZDc3ZGJjYjA3ZTUyMzk5OTE0Iiwic3ViIjoiYmM1ODgyMzEtMjRhMC00MjQ4LTgyOGMtM2FmYTdlMGNlODQ3IiwiYXV0aF90aW1lIjoxNTQ5OTU2NTUwLCJpZHAiOiJsb2NhbCIsImFtciI6WyJwd2QiXX0.MCiGlWAuzbu1p6HGoj4gI4mkTBZO9B9PQFwgW0vvMTNmpg_Z6BIMcg6Z8CPq8JnzuB4juPsTdjG9BoJ4pGlQCpQMTejAo6JyPQLViavMu64L4FcxXzGvzqula7J7rHhwwzT8X5fRgEzlE5jqGOdQcJFt_Ze7b9Cvzz32OIdCQA_de_ZgX4gxmB5VvXHlpf8ePJhzuFcUwt9u-osGDfYQ1WPFemQn17ZxIL3KcQReXtrskI15YuYLfk2xatllOs_LKc-6QKKfhHrnhf0-8xfOG7knG_Rv_nWGfuszA7ANSwMOBjiLlvtIWv_G-BbyiZphc2BdmC1RPyAWkDvLlDh1jg","state":"CfDJ8BOel7jXsO5El1oGZZifSOsG6v7YZxd3iXFm5xo8UcAeX_xc4reb9vcl59SAXxO0i40_DrAdVoeYINHFTtafTVIfMEh8qAQKZ6BW7e9GExir9gnfYoAkHGXCscRxGxGDpdyg5ZtTkuqqzCpxbY1k8niHn6msaYdkRspwVj1HqGdQ","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"EndSessionRequestValidationLog"}
+2019-02-12 16:31:34.147 +09:00 [DBG] Success validating end session request from mvc
+2019-02-12 16:31:34.161 +09:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2019-02-12 16:31:34.162 +09:00 [INF] AuthenticationScheme: Identity.External signed out.
+2019-02-12 16:31:34.162 +09:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2019-02-12 16:31:34.163 +09:00 [INF] {"SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","DisplayName":"Bob Smith","Category":"Authentication","Name":"User Logout Success","EventType":"Success","Id":1002,"Message":null,"ActivityId":"0HLKGMIMJU1M8:00000002","TimeStamp":"2019-02-12T07:31:34.0000000Z","ProcessId":34165,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLogoutSuccessEvent"}
+2019-02-12 16:31:34.620 +09:00 [DBG] Request path /connect/endsession/callback matched to endpoint type Endsession
+2019-02-12 16:31:34.621 +09:00 [DBG] Endpoint enabled: Endsession, successfully created handler: IdentityServer4.Endpoints.EndSessionCallbackEndpoint
+2019-02-12 16:31:34.621 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.EndSessionCallbackEndpoint for /connect/endsession/callback
+2019-02-12 16:31:34.621 +09:00 [DBG] Processing signout callback request
+2019-02-12 16:31:34.622 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:31:34.622 +09:00 [DBG] No client front-channel logout URLs
+2019-02-12 16:31:34.622 +09:00 [DBG] No client back-channel logout URLs
+2019-02-12 16:31:34.622 +09:00 [INF] Successful signout callback.
+2019-02-12 16:31:34.622 +09:00 [DBG] No client front-channel iframe urls
+2019-02-12 16:31:34.622 +09:00 [DBG] No client back-channel iframe urls
+2019-02-12 16:31:40.732 +09:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-02-12 16:31:40.732 +09:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-02-12 16:31:40.732 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-02-12 16:31:40.733 +09:00 [DBG] Start authorize request
+2019-02-12 16:31:40.733 +09:00 [DBG] No user present in authorize request
+2019-02-12 16:31:40.733 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:31:40.733 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:31:40.733 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:31:40.733 +09:00 [DBG] No PKCE used.
+2019-02-12 16:31:40.734 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:31:40.735 +09:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","AllowedRedirectUris":["http://localhost:5002/signin-oidc"],"SubjectId":"anonymous","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile api1 offline_access","State":"CfDJ8BOel7jXsO5El1oGZZifSOu3TJ7dKHHGRAUVw-0O54xU6stJHT-gDv3NerQlmxr9gNCqHkhykpdLH0ibLVNO_aEvmDMxVVBVi2Zx4MsEPjS1nXL_1_oMWzUhHLbGG16cBDkp9I8kCZln_wlAntR5wfh45sdUEq8uIiS6DisEuxOu1dN_A1XqbnKcla2_VI0hMluJfWqHFVWA7BIRaYkiGIvb0jlQpmmmZoV1O5wwEC8ujrPhZjEDvJmm7RBruWfUhYMQpFktyr55i0AJETbwgnk_H7nOgTBH_jyshR6EzbGKt6DTADuCARNtMTaoQLUHv5q8G8QRmWJhC9jqc8s_qNU","UiLocales":null,"Nonce":"636855535007251220.NjBlOWRkNWYtZmM3Zi00YjQ4LTg5NTktYjMzZWJhODM2ZTc3M2VhMjAwN2ItYWY5YS00ZDA2LTg3MDMtYjRmZjYzMDZlZjg4","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"mvc","redirect_uri":"http://localhost:5002/signin-oidc","response_type":"code id_token","scope":"openid profile api1 offline_access","response_mode":"form_post","nonce":"636855535007251220.NjBlOWRkNWYtZmM3Zi00YjQ4LTg5NTktYjMzZWJhODM2ZTc3M2VhMjAwN2ItYWY5YS00ZDA2LTg3MDMtYjRmZjYzMDZlZjg4","state":"CfDJ8BOel7jXsO5El1oGZZifSOu3TJ7dKHHGRAUVw-0O54xU6stJHT-gDv3NerQlmxr9gNCqHkhykpdLH0ibLVNO_aEvmDMxVVBVi2Zx4MsEPjS1nXL_1_oMWzUhHLbGG16cBDkp9I8kCZln_wlAntR5wfh45sdUEq8uIiS6DisEuxOu1dN_A1XqbnKcla2_VI0hMluJfWqHFVWA7BIRaYkiGIvb0jlQpmmmZoV1O5wwEC8ujrPhZjEDvJmm7RBruWfUhYMQpFktyr55i0AJETbwgnk_H7nOgTBH_jyshR6EzbGKt6DTADuCARNtMTaoQLUHv5q8G8QRmWJhC9jqc8s_qNU","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-02-12 16:31:40.735 +09:00 [INF] Showing login: User is not authenticated
+2019-02-12 16:31:40.754 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:31:40.754 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:31:40.754 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:31:40.754 +09:00 [DBG] No PKCE used.
+2019-02-12 16:31:40.755 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:31:40.755 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:31:42.969 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:31:42.969 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:31:42.969 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:31:42.970 +09:00 [DBG] No PKCE used.
+2019-02-12 16:31:42.970 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:31:42.970 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:31:50.618 +09:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-02-12 16:31:50.621 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:31:50.621 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:31:50.621 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:31:50.622 +09:00 [DBG] No PKCE used.
+2019-02-12 16:31:50.622 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:31:50.654 +09:00 [DBG] Augmenting SignInContext
+2019-02-12 16:31:50.654 +09:00 [DBG] Adding idp claim with value: local
+2019-02-12 16:31:50.654 +09:00 [DBG] Adding amr claim with value: pwd
+2019-02-12 16:31:50.654 +09:00 [DBG] Adding auth_time claim with value: 1549956710
+2019-02-12 16:31:50.654 +09:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-02-12 16:31:50.656 +09:00 [INF] {"Username":"bob","Provider":null,"ProviderUserId":null,"SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","DisplayName":"bob","Endpoint":"UI","Category":"Authentication","Name":"User Login Success","EventType":"Success","Id":1000,"Message":null,"ActivityId":"0HLKGMIMJU1M8:00000007","TimeStamp":"2019-02-12T07:31:50.0000000Z","ProcessId":34165,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLoginSuccessEvent"}
+2019-02-12 16:31:50.656 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:31:50.665 +09:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2019-02-12 16:31:50.665 +09:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2019-02-12 16:31:50.666 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2019-02-12 16:31:50.666 +09:00 [DBG] Start authorize callback request
+2019-02-12 16:31:50.666 +09:00 [DBG] User in authorize request: bc588231-24a0-4248-828c-3afa7e0ce847
+2019-02-12 16:31:50.666 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:31:50.667 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:31:50.667 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:31:50.667 +09:00 [DBG] No PKCE used.
+2019-02-12 16:31:50.668 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:31:50.669 +09:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","AllowedRedirectUris":["http://localhost:5002/signin-oidc"],"SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile api1 offline_access","State":"CfDJ8BOel7jXsO5El1oGZZifSOu3TJ7dKHHGRAUVw-0O54xU6stJHT-gDv3NerQlmxr9gNCqHkhykpdLH0ibLVNO_aEvmDMxVVBVi2Zx4MsEPjS1nXL_1_oMWzUhHLbGG16cBDkp9I8kCZln_wlAntR5wfh45sdUEq8uIiS6DisEuxOu1dN_A1XqbnKcla2_VI0hMluJfWqHFVWA7BIRaYkiGIvb0jlQpmmmZoV1O5wwEC8ujrPhZjEDvJmm7RBruWfUhYMQpFktyr55i0AJETbwgnk_H7nOgTBH_jyshR6EzbGKt6DTADuCARNtMTaoQLUHv5q8G8QRmWJhC9jqc8s_qNU","UiLocales":null,"Nonce":"636855535007251220.NjBlOWRkNWYtZmM3Zi00YjQ4LTg5NTktYjMzZWJhODM2ZTc3M2VhMjAwN2ItYWY5YS00ZDA2LTg3MDMtYjRmZjYzMDZlZjg4","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"24504e50c7137710d9418c616c898dca","Raw":{"client_id":"mvc","redirect_uri":"http://localhost:5002/signin-oidc","response_type":"code id_token","scope":"openid profile api1 offline_access","response_mode":"form_post","nonce":"636855535007251220.NjBlOWRkNWYtZmM3Zi00YjQ4LTg5NTktYjMzZWJhODM2ZTc3M2VhMjAwN2ItYWY5YS00ZDA2LTg3MDMtYjRmZjYzMDZlZjg4","state":"CfDJ8BOel7jXsO5El1oGZZifSOu3TJ7dKHHGRAUVw-0O54xU6stJHT-gDv3NerQlmxr9gNCqHkhykpdLH0ibLVNO_aEvmDMxVVBVi2Zx4MsEPjS1nXL_1_oMWzUhHLbGG16cBDkp9I8kCZln_wlAntR5wfh45sdUEq8uIiS6DisEuxOu1dN_A1XqbnKcla2_VI0hMluJfWqHFVWA7BIRaYkiGIvb0jlQpmmmZoV1O5wwEC8ujrPhZjEDvJmm7RBruWfUhYMQpFktyr55i0AJETbwgnk_H7nOgTBH_jyshR6EzbGKt6DTADuCARNtMTaoQLUHv5q8G8QRmWJhC9jqc8s_qNU","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-02-12 16:31:50.673 +09:00 [DBG] Scopes contains offline_access, consent is required
+2019-02-12 16:31:50.674 +09:00 [INF] Showing consent: User has not yet consented
+2019-02-12 16:31:50.688 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:31:50.688 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:31:50.688 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:31:50.688 +09:00 [DBG] No PKCE used.
+2019-02-12 16:31:50.689 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:31:50.689 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:31:52.385 +09:00 [DBG] CORS request made for path: /consent from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-02-12 16:31:52.388 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:31:52.388 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:31:52.389 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:31:52.389 +09:00 [DBG] No PKCE used.
+2019-02-12 16:31:52.389 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:31:52.390 +09:00 [INF] {"SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","ClientId":"mvc","RequestedScopes":["openid","profile","api1","offline_access"],"GrantedScopes":["openid","profile","api1","offline_access"],"ConsentRemembered":true,"Category":"Grants","Name":"Consent granted","EventType":"Information","Id":4000,"Message":null,"ActivityId":"0HLKGMIMJU1M8:0000000A","TimeStamp":"2019-02-12T07:31:52.0000000Z","ProcessId":34165,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"ConsentGrantedEvent"}
+2019-02-12 16:31:52.390 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:31:52.398 +09:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2019-02-12 16:31:52.398 +09:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2019-02-12 16:31:52.398 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2019-02-12 16:31:52.399 +09:00 [DBG] Start authorize callback request
+2019-02-12 16:31:52.399 +09:00 [DBG] User in authorize request: bc588231-24a0-4248-828c-3afa7e0ce847
+2019-02-12 16:31:52.400 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:31:52.400 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:31:52.400 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:31:52.400 +09:00 [DBG] No PKCE used.
+2019-02-12 16:31:52.401 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:31:52.401 +09:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","AllowedRedirectUris":["http://localhost:5002/signin-oidc"],"SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile api1 offline_access","State":"CfDJ8BOel7jXsO5El1oGZZifSOu3TJ7dKHHGRAUVw-0O54xU6stJHT-gDv3NerQlmxr9gNCqHkhykpdLH0ibLVNO_aEvmDMxVVBVi2Zx4MsEPjS1nXL_1_oMWzUhHLbGG16cBDkp9I8kCZln_wlAntR5wfh45sdUEq8uIiS6DisEuxOu1dN_A1XqbnKcla2_VI0hMluJfWqHFVWA7BIRaYkiGIvb0jlQpmmmZoV1O5wwEC8ujrPhZjEDvJmm7RBruWfUhYMQpFktyr55i0AJETbwgnk_H7nOgTBH_jyshR6EzbGKt6DTADuCARNtMTaoQLUHv5q8G8QRmWJhC9jqc8s_qNU","UiLocales":null,"Nonce":"636855535007251220.NjBlOWRkNWYtZmM3Zi00YjQ4LTg5NTktYjMzZWJhODM2ZTc3M2VhMjAwN2ItYWY5YS00ZDA2LTg3MDMtYjRmZjYzMDZlZjg4","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"24504e50c7137710d9418c616c898dca","Raw":{"client_id":"mvc","redirect_uri":"http://localhost:5002/signin-oidc","response_type":"code id_token","scope":"openid profile api1 offline_access","response_mode":"form_post","nonce":"636855535007251220.NjBlOWRkNWYtZmM3Zi00YjQ4LTg5NTktYjMzZWJhODM2ZTc3M2VhMjAwN2ItYWY5YS00ZDA2LTg3MDMtYjRmZjYzMDZlZjg4","state":"CfDJ8BOel7jXsO5El1oGZZifSOu3TJ7dKHHGRAUVw-0O54xU6stJHT-gDv3NerQlmxr9gNCqHkhykpdLH0ibLVNO_aEvmDMxVVBVi2Zx4MsEPjS1nXL_1_oMWzUhHLbGG16cBDkp9I8kCZln_wlAntR5wfh45sdUEq8uIiS6DisEuxOu1dN_A1XqbnKcla2_VI0hMluJfWqHFVWA7BIRaYkiGIvb0jlQpmmmZoV1O5wwEC8ujrPhZjEDvJmm7RBruWfUhYMQpFktyr55i0AJETbwgnk_H7nOgTBH_jyshR6EzbGKt6DTADuCARNtMTaoQLUHv5q8G8QRmWJhC9jqc8s_qNU","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-02-12 16:31:52.403 +09:00 [DBG] Scopes contains offline_access, consent is required
+2019-02-12 16:31:52.403 +09:00 [INF] User consented to scopes: ["openid","profile","api1","offline_access"]
+2019-02-12 16:31:52.403 +09:00 [DBG] User indicated to remember consent for scopes: ["openid","profile","api1","offline_access"]
+2019-02-12 16:31:52.403 +09:00 [DBG] Client allows remembering consent, and consent given. Updating consent store for subject: bc588231-24a0-4248-828c-3afa7e0ce847
+2019-02-12 16:31:52.410 +09:00 [DBG] Creating Hybrid Flow response.
+2019-02-12 16:31:52.418 +09:00 [DBG] Creating Implicit Flow response.
+2019-02-12 16:31:52.419 +09:00 [DBG] Getting claims for identity token for subject: bc588231-24a0-4248-828c-3afa7e0ce847 and client: mvc
+2019-02-12 16:31:52.419 +09:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2019-02-12 16:31:52.439 +09:00 [INF] {"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","Endpoint":"Authorize","SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","Scopes":"openid profile api1 offline_access","GrantType":"hybrid","Tokens":[{"TokenType":"id_token","TokenValue":"****lfOw","$type":"Token"},{"TokenType":"code","TokenValue":"****7fc1","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLKGMIMJU1M8:0000000B","TimeStamp":"2019-02-12T07:31:52.0000000Z","ProcessId":34165,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-02-12 16:31:52.440 +09:00 [INF] Authorize endpoint response
+{"SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","ClientId":"mvc","RedirectUri":"http://localhost:5002/signin-oidc","State":"CfDJ8BOel7jXsO5El1oGZZifSOu3TJ7dKHHGRAUVw-0O54xU6stJHT-gDv3NerQlmxr9gNCqHkhykpdLH0ibLVNO_aEvmDMxVVBVi2Zx4MsEPjS1nXL_1_oMWzUhHLbGG16cBDkp9I8kCZln_wlAntR5wfh45sdUEq8uIiS6DisEuxOu1dN_A1XqbnKcla2_VI0hMluJfWqHFVWA7BIRaYkiGIvb0jlQpmmmZoV1O5wwEC8ujrPhZjEDvJmm7RBruWfUhYMQpFktyr55i0AJETbwgnk_H7nOgTBH_jyshR6EzbGKt6DTADuCARNtMTaoQLUHv5q8G8QRmWJhC9jqc8s_qNU","Scope":"openid profile api1 offline_access","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2019-02-12 16:31:52.440 +09:00 [DBG] Augmenting SignInContext
+2019-02-12 16:31:52.441 +09:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-02-12 16:31:52.663 +09:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-02-12 16:31:52.664 +09:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-02-12 16:31:52.664 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-02-12 16:31:52.664 +09:00 [DBG] Start token request.
+2019-02-12 16:31:52.664 +09:00 [DBG] Start client validation
+2019-02-12 16:31:52.664 +09:00 [DBG] Start parsing Basic Authentication secret
+2019-02-12 16:31:52.664 +09:00 [DBG] Start parsing for secret in post body
+2019-02-12 16:31:52.664 +09:00 [DBG] Parser found secret: PostBodySecretParser
+2019-02-12 16:31:52.665 +09:00 [DBG] Secret id found: mvc
+2019-02-12 16:31:52.665 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:31:52.665 +09:00 [DBG] Secret validator success: HashedSharedSecretValidator
+2019-02-12 16:31:52.665 +09:00 [DBG] Client validation success
+2019-02-12 16:31:52.665 +09:00 [INF] {"ClientId":"mvc","AuthenticationMethod":"SharedSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLKGMIMJU1M7:00000003","TimeStamp":"2019-02-12T07:31:52.0000000Z","ProcessId":34165,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2019-02-12 16:31:52.666 +09:00 [DBG] Start token request validation
+2019-02-12 16:31:52.666 +09:00 [DBG] Start validation of authorization code token request
+2019-02-12 16:31:52.681 +09:00 [DBG] Validation of authorization code token request success
+2019-02-12 16:31:52.681 +09:00 [INF] Token request validation success
+{"ClientId":"mvc","ClientName":"MVC Client","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"a3f7aac276d3c0ce65eae8d27fde593c6fb9e8a1ffc4ed4364faca3f87b47fc1","RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"mvc","client_secret":"***REDACTED***","code":"a3f7aac276d3c0ce65eae8d27fde593c6fb9e8a1ffc4ed4364faca3f87b47fc1","grant_type":"authorization_code","redirect_uri":"http://localhost:5002/signin-oidc"},"$type":"TokenRequestValidationLog"}
+2019-02-12 16:31:52.681 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:31:52.681 +09:00 [DBG] Getting claims for access token for client: mvc
+2019-02-12 16:31:52.682 +09:00 [DBG] Getting claims for access token for subject: bc588231-24a0-4248-828c-3afa7e0ce847
+2019-02-12 16:31:52.706 +09:00 [DBG] Creating refresh token
+2019-02-12 16:31:52.706 +09:00 [DBG] Setting an absolute lifetime: 2592000
+2019-02-12 16:31:52.720 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:31:52.720 +09:00 [DBG] Getting claims for identity token for subject: bc588231-24a0-4248-828c-3afa7e0ce847 and client: mvc
+2019-02-12 16:31:52.720 +09:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2019-02-12 16:31:52.736 +09:00 [INF] {"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":"openid profile api1 offline_access","GrantType":"authorization_code","Tokens":[{"TokenType":"id_token","TokenValue":"****072A","$type":"Token"},{"TokenType":"refresh_token","TokenValue":"****623a","$type":"Token"},{"TokenType":"access_token","TokenValue":"****yBCg","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLKGMIMJU1M7:00000003","TimeStamp":"2019-02-12T07:31:52.0000000Z","ProcessId":34165,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-02-12 16:31:52.737 +09:00 [DBG] Token request success.
+2019-02-12 16:31:52.747 +09:00 [DBG] Request path /connect/userinfo matched to endpoint type Userinfo
+2019-02-12 16:31:52.747 +09:00 [DBG] Endpoint enabled: Userinfo, successfully created handler: IdentityServer4.Endpoints.UserInfoEndpoint
+2019-02-12 16:31:52.747 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2019-02-12 16:31:52.747 +09:00 [DBG] Start userinfo request
+2019-02-12 16:31:52.748 +09:00 [DBG] Bearer token found in header
+2019-02-12 16:31:52.750 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:31:52.751 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:31:52.753 +09:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2019-02-12 16:31:52.753 +09:00 [DBG] Token validation success
+{"ClientId":null,"ClientName":null,"ValidateLifetime":true,"AccessTokenType":"Jwt","ExpectedScope":"openid","TokenHandle":null,"JwtId":null,"Claims":{"nbf":1549956712,"exp":1549960312,"iss":"http://localhost:5000","aud":["http://localhost:5000/resources","api1"],"client_id":"mvc","sub":"bc588231-24a0-4248-828c-3afa7e0ce847","auth_time":1549956710,"idp":"local","scope":["openid","profile","api1","offline_access"],"amr":"pwd"},"$type":"TokenValidationLog"}
+2019-02-12 16:31:52.753 +09:00 [DBG] Creating userinfo response
+2019-02-12 16:31:52.753 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:31:52.753 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:31:52.753 +09:00 [DBG] Requested claim types: sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at
+2019-02-12 16:31:52.753 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:31:52.755 +09:00 [INF] Profile service returned the following claim types: sub name given_name family_name website preferred_username
+2019-02-12 16:31:52.755 +09:00 [DBG] End userinfo request
+2019-02-12 16:32:02.112 +09:00 [DBG] Request path /connect/userinfo matched to endpoint type Userinfo
+2019-02-12 16:32:02.112 +09:00 [DBG] Endpoint enabled: Userinfo, successfully created handler: IdentityServer4.Endpoints.UserInfoEndpoint
+2019-02-12 16:32:02.112 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2019-02-12 16:32:02.112 +09:00 [DBG] Start userinfo request
+2019-02-12 16:32:02.113 +09:00 [DBG] Bearer token found in header
+2019-02-12 16:32:02.117 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:32:02.117 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:32:02.120 +09:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2019-02-12 16:32:02.120 +09:00 [DBG] Token validation success
+{"ClientId":null,"ClientName":null,"ValidateLifetime":true,"AccessTokenType":"Jwt","ExpectedScope":"openid","TokenHandle":null,"JwtId":null,"Claims":{"nbf":1549956712,"exp":1549960312,"iss":"http://localhost:5000","aud":["http://localhost:5000/resources","api1"],"client_id":"mvc","sub":"bc588231-24a0-4248-828c-3afa7e0ce847","auth_time":1549956710,"idp":"local","scope":["openid","profile","api1","offline_access"],"amr":"pwd"},"$type":"TokenValidationLog"}
+2019-02-12 16:32:02.121 +09:00 [DBG] Creating userinfo response
+2019-02-12 16:32:02.121 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:32:02.121 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:32:02.121 +09:00 [DBG] Requested claim types: sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at
+2019-02-12 16:32:02.121 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:32:02.124 +09:00 [INF] Profile service returned the following claim types: sub name given_name family_name website preferred_username
+2019-02-12 16:32:02.124 +09:00 [DBG] End userinfo request
+2019-02-12 16:36:03.587 +09:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-02-12 16:36:03.632 +09:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-02-12 16:36:03.636 +09:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-02-12 16:36:03.636 +09:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-02-12 16:36:03.636 +09:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-02-12 16:36:03.636 +09:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-02-12 16:36:03.636 +09:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-02-12 16:36:05.215 +09:00 [DBG] Login Url: /Account/Login
+2019-02-12 16:36:05.217 +09:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-02-12 16:36:05.217 +09:00 [DBG] Logout Url: /Account/Logout
+2019-02-12 16:36:05.218 +09:00 [DBG] ConsentUrl Url: /consent
+2019-02-12 16:36:05.218 +09:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-02-12 16:36:05.218 +09:00 [DBG] Error Url: /home/error
+2019-02-12 16:36:05.218 +09:00 [DBG] Error Id Parameter: errorId
+2019-02-12 16:36:43.624 +09:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-02-12 16:36:43.965 +09:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-02-12 16:36:43.966 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-02-12 16:36:43.973 +09:00 [DBG] Start discovery request
+2019-02-12 16:36:44.276 +09:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2019-02-12 16:36:44.279 +09:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2019-02-12 16:36:44.279 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-02-12 16:36:44.286 +09:00 [DBG] Start key discovery request
+2019-02-12 16:36:44.356 +09:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-02-12 16:36:44.361 +09:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-02-12 16:36:44.361 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-02-12 16:36:44.369 +09:00 [DBG] Start authorize request
+2019-02-12 16:36:44.397 +09:00 [DBG] No user present in authorize request
+2019-02-12 16:36:44.405 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:36:44.433 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:36:44.443 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:36:44.444 +09:00 [DBG] No PKCE used.
+2019-02-12 16:36:44.487 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:36:44.505 +09:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","AllowedRedirectUris":["http://localhost:5002/signin-oidc"],"SubjectId":"anonymous","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile api1 offline_access","State":"CfDJ8BOel7jXsO5El1oGZZifSOsyC-XwuSGVZ8Yr5fYgPsv2hPuYxVjrFSYmc-sv3jdqZT4_2a8OPJXCanSUbxa_-mk74H2mief4GlxbpzNixhLfBTgnqsOPpSDUZcdN29syhwlVyOgJGVA0AZsY4fnkuRqDamWDd9HEKdz68wVEzAhncVMJplPFrXR1j0xFNxJoluDiVsCMa1kTna0giXGpnWLLKnr539Dm-MAmKqNr8uHOgWMlUaZU55ztrhaZAj53jbG8UP3Ucvpi-7eIHlGm7vLfIt48x8-bdH1EmhqNCf2XmKIFkLFscOs37Gwr34IlUS0wSUlXvpj0vCdnl9ZhV8o","UiLocales":null,"Nonce":"636855538043349450.YzljNTVjNTctMzgyNy00OGQ3LWFlY2ItMzQ0MWE5YzZkYTAwYjBkNTJmZjEtYjcwYS00NDZjLWI1N2EtYjg1OWNiNjdiYzA0","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"mvc","redirect_uri":"http://localhost:5002/signin-oidc","response_type":"code id_token","scope":"openid profile api1 offline_access","response_mode":"form_post","nonce":"636855538043349450.YzljNTVjNTctMzgyNy00OGQ3LWFlY2ItMzQ0MWE5YzZkYTAwYjBkNTJmZjEtYjcwYS00NDZjLWI1N2EtYjg1OWNiNjdiYzA0","state":"CfDJ8BOel7jXsO5El1oGZZifSOsyC-XwuSGVZ8Yr5fYgPsv2hPuYxVjrFSYmc-sv3jdqZT4_2a8OPJXCanSUbxa_-mk74H2mief4GlxbpzNixhLfBTgnqsOPpSDUZcdN29syhwlVyOgJGVA0AZsY4fnkuRqDamWDd9HEKdz68wVEzAhncVMJplPFrXR1j0xFNxJoluDiVsCMa1kTna0giXGpnWLLKnr539Dm-MAmKqNr8uHOgWMlUaZU55ztrhaZAj53jbG8UP3Ucvpi-7eIHlGm7vLfIt48x8-bdH1EmhqNCf2XmKIFkLFscOs37Gwr34IlUS0wSUlXvpj0vCdnl9ZhV8o","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-02-12 16:36:44.530 +09:00 [INF] Showing login: User is not authenticated
+2019-02-12 16:36:44.605 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:36:44.606 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:36:44.606 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:36:44.606 +09:00 [DBG] No PKCE used.
+2019-02-12 16:36:44.607 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:36:44.610 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:36:44.707 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:36:44.707 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:36:44.707 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:36:44.708 +09:00 [DBG] No PKCE used.
+2019-02-12 16:36:44.708 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:36:44.708 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:36:53.567 +09:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-02-12 16:36:53.635 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:36:53.635 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:36:53.636 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:36:53.636 +09:00 [DBG] No PKCE used.
+2019-02-12 16:36:53.636 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:36:55.457 +09:00 [DBG] Augmenting SignInContext
+2019-02-12 16:36:55.461 +09:00 [DBG] Adding idp claim with value: local
+2019-02-12 16:36:55.461 +09:00 [DBG] Adding amr claim with value: pwd
+2019-02-12 16:36:55.461 +09:00 [DBG] Adding auth_time claim with value: 1549957015
+2019-02-12 16:36:55.471 +09:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-02-12 16:36:55.494 +09:00 [INF] {"Username":"bob","Provider":null,"ProviderUserId":null,"SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","DisplayName":"bob","Endpoint":"UI","Category":"Authentication","Name":"User Login Success","EventType":"Success","Id":1000,"Message":null,"ActivityId":"0HLKGNIV2IL8P:00000002","TimeStamp":"2019-02-12T07:36:55.0000000Z","ProcessId":71531,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLoginSuccessEvent"}
+2019-02-12 16:36:55.496 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:36:55.507 +09:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2019-02-12 16:36:55.508 +09:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2019-02-12 16:36:55.508 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2019-02-12 16:36:55.515 +09:00 [DBG] Start authorize callback request
+2019-02-12 16:36:55.519 +09:00 [DBG] User in authorize request: bc588231-24a0-4248-828c-3afa7e0ce847
+2019-02-12 16:36:55.520 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:36:55.520 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:36:55.520 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:36:55.520 +09:00 [DBG] No PKCE used.
+2019-02-12 16:36:55.520 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:36:55.521 +09:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","AllowedRedirectUris":["http://localhost:5002/signin-oidc"],"SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile api1 offline_access","State":"CfDJ8BOel7jXsO5El1oGZZifSOsyC-XwuSGVZ8Yr5fYgPsv2hPuYxVjrFSYmc-sv3jdqZT4_2a8OPJXCanSUbxa_-mk74H2mief4GlxbpzNixhLfBTgnqsOPpSDUZcdN29syhwlVyOgJGVA0AZsY4fnkuRqDamWDd9HEKdz68wVEzAhncVMJplPFrXR1j0xFNxJoluDiVsCMa1kTna0giXGpnWLLKnr539Dm-MAmKqNr8uHOgWMlUaZU55ztrhaZAj53jbG8UP3Ucvpi-7eIHlGm7vLfIt48x8-bdH1EmhqNCf2XmKIFkLFscOs37Gwr34IlUS0wSUlXvpj0vCdnl9ZhV8o","UiLocales":null,"Nonce":"636855538043349450.YzljNTVjNTctMzgyNy00OGQ3LWFlY2ItMzQ0MWE5YzZkYTAwYjBkNTJmZjEtYjcwYS00NDZjLWI1N2EtYjg1OWNiNjdiYzA0","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"7426837735059c84d65d1df0a4a06fb0","Raw":{"client_id":"mvc","redirect_uri":"http://localhost:5002/signin-oidc","response_type":"code id_token","scope":"openid profile api1 offline_access","response_mode":"form_post","nonce":"636855538043349450.YzljNTVjNTctMzgyNy00OGQ3LWFlY2ItMzQ0MWE5YzZkYTAwYjBkNTJmZjEtYjcwYS00NDZjLWI1N2EtYjg1OWNiNjdiYzA0","state":"CfDJ8BOel7jXsO5El1oGZZifSOsyC-XwuSGVZ8Yr5fYgPsv2hPuYxVjrFSYmc-sv3jdqZT4_2a8OPJXCanSUbxa_-mk74H2mief4GlxbpzNixhLfBTgnqsOPpSDUZcdN29syhwlVyOgJGVA0AZsY4fnkuRqDamWDd9HEKdz68wVEzAhncVMJplPFrXR1j0xFNxJoluDiVsCMa1kTna0giXGpnWLLKnr539Dm-MAmKqNr8uHOgWMlUaZU55ztrhaZAj53jbG8UP3Ucvpi-7eIHlGm7vLfIt48x8-bdH1EmhqNCf2XmKIFkLFscOs37Gwr34IlUS0wSUlXvpj0vCdnl9ZhV8o","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-02-12 16:36:55.583 +09:00 [DBG] Scopes contains offline_access, consent is required
+2019-02-12 16:36:55.583 +09:00 [INF] Showing consent: User has not yet consented
+2019-02-12 16:36:55.611 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:36:55.611 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:36:55.611 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:36:55.611 +09:00 [DBG] No PKCE used.
+2019-02-12 16:36:55.612 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:36:55.612 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:36:57.653 +09:00 [DBG] CORS request made for path: /consent from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-02-12 16:36:57.690 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:36:57.690 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:36:57.690 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:36:57.690 +09:00 [DBG] No PKCE used.
+2019-02-12 16:36:57.691 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:36:57.693 +09:00 [INF] {"SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","ClientId":"mvc","RequestedScopes":["openid","profile","api1","offline_access"],"GrantedScopes":["openid","profile","api1","offline_access"],"ConsentRemembered":true,"Category":"Grants","Name":"Consent granted","EventType":"Information","Id":4000,"Message":null,"ActivityId":"0HLKGNIV2IL8P:00000005","TimeStamp":"2019-02-12T07:36:57.0000000Z","ProcessId":71531,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"ConsentGrantedEvent"}
+2019-02-12 16:36:57.721 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:36:57.731 +09:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2019-02-12 16:36:57.731 +09:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2019-02-12 16:36:57.731 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2019-02-12 16:36:57.732 +09:00 [DBG] Start authorize callback request
+2019-02-12 16:36:57.738 +09:00 [DBG] User in authorize request: bc588231-24a0-4248-828c-3afa7e0ce847
+2019-02-12 16:36:57.738 +09:00 [DBG] Start authorize request protocol validation
+2019-02-12 16:36:57.739 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:36:57.739 +09:00 [DBG] Checking for PKCE parameters
+2019-02-12 16:36:57.739 +09:00 [DBG] No PKCE used.
+2019-02-12 16:36:57.740 +09:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-02-12 16:36:57.740 +09:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","AllowedRedirectUris":["http://localhost:5002/signin-oidc"],"SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile api1 offline_access","State":"CfDJ8BOel7jXsO5El1oGZZifSOsyC-XwuSGVZ8Yr5fYgPsv2hPuYxVjrFSYmc-sv3jdqZT4_2a8OPJXCanSUbxa_-mk74H2mief4GlxbpzNixhLfBTgnqsOPpSDUZcdN29syhwlVyOgJGVA0AZsY4fnkuRqDamWDd9HEKdz68wVEzAhncVMJplPFrXR1j0xFNxJoluDiVsCMa1kTna0giXGpnWLLKnr539Dm-MAmKqNr8uHOgWMlUaZU55ztrhaZAj53jbG8UP3Ucvpi-7eIHlGm7vLfIt48x8-bdH1EmhqNCf2XmKIFkLFscOs37Gwr34IlUS0wSUlXvpj0vCdnl9ZhV8o","UiLocales":null,"Nonce":"636855538043349450.YzljNTVjNTctMzgyNy00OGQ3LWFlY2ItMzQ0MWE5YzZkYTAwYjBkNTJmZjEtYjcwYS00NDZjLWI1N2EtYjg1OWNiNjdiYzA0","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"7426837735059c84d65d1df0a4a06fb0","Raw":{"client_id":"mvc","redirect_uri":"http://localhost:5002/signin-oidc","response_type":"code id_token","scope":"openid profile api1 offline_access","response_mode":"form_post","nonce":"636855538043349450.YzljNTVjNTctMzgyNy00OGQ3LWFlY2ItMzQ0MWE5YzZkYTAwYjBkNTJmZjEtYjcwYS00NDZjLWI1N2EtYjg1OWNiNjdiYzA0","state":"CfDJ8BOel7jXsO5El1oGZZifSOsyC-XwuSGVZ8Yr5fYgPsv2hPuYxVjrFSYmc-sv3jdqZT4_2a8OPJXCanSUbxa_-mk74H2mief4GlxbpzNixhLfBTgnqsOPpSDUZcdN29syhwlVyOgJGVA0AZsY4fnkuRqDamWDd9HEKdz68wVEzAhncVMJplPFrXR1j0xFNxJoluDiVsCMa1kTna0giXGpnWLLKnr539Dm-MAmKqNr8uHOgWMlUaZU55ztrhaZAj53jbG8UP3Ucvpi-7eIHlGm7vLfIt48x8-bdH1EmhqNCf2XmKIFkLFscOs37Gwr34IlUS0wSUlXvpj0vCdnl9ZhV8o","x-client-SKU":"ID_NETSTANDARD2_0","x-client-ver":"5.3.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2019-02-12 16:36:57.744 +09:00 [DBG] Scopes contains offline_access, consent is required
+2019-02-12 16:36:57.764 +09:00 [INF] User consented to scopes: ["openid","profile","api1","offline_access"]
+2019-02-12 16:36:57.768 +09:00 [DBG] User indicated to remember consent for scopes: ["openid","profile","api1","offline_access"]
+2019-02-12 16:36:57.779 +09:00 [DBG] Client allows remembering consent, and consent given. Updating consent store for subject: bc588231-24a0-4248-828c-3afa7e0ce847
+2019-02-12 16:36:57.820 +09:00 [DBG] Creating Hybrid Flow response.
+2019-02-12 16:36:57.864 +09:00 [DBG] Creating Implicit Flow response.
+2019-02-12 16:36:57.890 +09:00 [DBG] Getting claims for identity token for subject: bc588231-24a0-4248-828c-3afa7e0ce847 and client: mvc
+2019-02-12 16:36:57.894 +09:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2019-02-12 16:36:58.045 +09:00 [INF] {"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":"http://localhost:5002/signin-oidc","Endpoint":"Authorize","SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","Scopes":"openid profile api1 offline_access","GrantType":"hybrid","Tokens":[{"TokenType":"id_token","TokenValue":"****kkQA","$type":"Token"},{"TokenType":"code","TokenValue":"****d9e7","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLKGNIV2IL8P:00000006","TimeStamp":"2019-02-12T07:36:58.0000000Z","ProcessId":71531,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-02-12 16:36:58.047 +09:00 [INF] Authorize endpoint response
+{"SubjectId":"bc588231-24a0-4248-828c-3afa7e0ce847","ClientId":"mvc","RedirectUri":"http://localhost:5002/signin-oidc","State":"CfDJ8BOel7jXsO5El1oGZZifSOsyC-XwuSGVZ8Yr5fYgPsv2hPuYxVjrFSYmc-sv3jdqZT4_2a8OPJXCanSUbxa_-mk74H2mief4GlxbpzNixhLfBTgnqsOPpSDUZcdN29syhwlVyOgJGVA0AZsY4fnkuRqDamWDd9HEKdz68wVEzAhncVMJplPFrXR1j0xFNxJoluDiVsCMa1kTna0giXGpnWLLKnr539Dm-MAmKqNr8uHOgWMlUaZU55ztrhaZAj53jbG8UP3Ucvpi-7eIHlGm7vLfIt48x8-bdH1EmhqNCf2XmKIFkLFscOs37Gwr34IlUS0wSUlXvpj0vCdnl9ZhV8o","Scope":"openid profile api1 offline_access","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2019-02-12 16:36:58.072 +09:00 [DBG] Augmenting SignInContext
+2019-02-12 16:36:58.073 +09:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-02-12 16:36:58.399 +09:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-02-12 16:36:58.406 +09:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-02-12 16:36:58.406 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-02-12 16:36:58.419 +09:00 [DBG] Start token request.
+2019-02-12 16:36:58.429 +09:00 [DBG] Start client validation
+2019-02-12 16:36:58.437 +09:00 [DBG] Start parsing Basic Authentication secret
+2019-02-12 16:36:58.442 +09:00 [DBG] Start parsing for secret in post body
+2019-02-12 16:36:58.443 +09:00 [DBG] Parser found secret: PostBodySecretParser
+2019-02-12 16:36:58.443 +09:00 [DBG] Secret id found: mvc
+2019-02-12 16:36:58.443 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:36:58.455 +09:00 [DBG] Secret validator success: HashedSharedSecretValidator
+2019-02-12 16:36:58.455 +09:00 [DBG] Client validation success
+2019-02-12 16:36:58.455 +09:00 [INF] {"ClientId":"mvc","AuthenticationMethod":"SharedSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLKGNIV2IL8O:00000003","TimeStamp":"2019-02-12T07:36:58.0000000Z","ProcessId":71531,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2019-02-12 16:36:58.463 +09:00 [DBG] Start token request validation
+2019-02-12 16:36:58.476 +09:00 [DBG] Start validation of authorization code token request
+2019-02-12 16:36:58.497 +09:00 [DBG] Validation of authorization code token request success
+2019-02-12 16:36:58.499 +09:00 [INF] Token request validation success
+{"ClientId":"mvc","ClientName":"MVC Client","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"ae9cf37b4c2d26fe2ae0f6107f961acbd96f04180d6a516b5037922b7502d9e7","RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"mvc","client_secret":"***REDACTED***","code":"ae9cf37b4c2d26fe2ae0f6107f961acbd96f04180d6a516b5037922b7502d9e7","grant_type":"authorization_code","redirect_uri":"http://localhost:5002/signin-oidc"},"$type":"TokenRequestValidationLog"}
+2019-02-12 16:36:58.516 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:36:58.529 +09:00 [DBG] Getting claims for access token for client: mvc
+2019-02-12 16:36:58.529 +09:00 [DBG] Getting claims for access token for subject: bc588231-24a0-4248-828c-3afa7e0ce847
+2019-02-12 16:36:58.560 +09:00 [DBG] Creating refresh token
+2019-02-12 16:36:58.560 +09:00 [DBG] Setting an absolute lifetime: 2592000
+2019-02-12 16:36:58.576 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:36:58.576 +09:00 [DBG] Getting claims for identity token for subject: bc588231-24a0-4248-828c-3afa7e0ce847 and client: mvc
+2019-02-12 16:36:58.576 +09:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2019-02-12 16:36:58.595 +09:00 [INF] {"ClientId":"mvc","ClientName":"MVC Client","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":"openid profile api1 offline_access","GrantType":"authorization_code","Tokens":[{"TokenType":"id_token","TokenValue":"****ywyA","$type":"Token"},{"TokenType":"refresh_token","TokenValue":"****a9f4","$type":"Token"},{"TokenType":"access_token","TokenValue":"****xTaA","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLKGNIV2IL8O:00000003","TimeStamp":"2019-02-12T07:36:58.0000000Z","ProcessId":71531,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-02-12 16:36:58.597 +09:00 [DBG] Token request success.
+2019-02-12 16:36:58.616 +09:00 [DBG] Request path /connect/userinfo matched to endpoint type Userinfo
+2019-02-12 16:36:58.617 +09:00 [DBG] Endpoint enabled: Userinfo, successfully created handler: IdentityServer4.Endpoints.UserInfoEndpoint
+2019-02-12 16:36:58.617 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2019-02-12 16:36:58.628 +09:00 [DBG] Start userinfo request
+2019-02-12 16:36:58.633 +09:00 [DBG] Bearer token found in header
+2019-02-12 16:36:58.709 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:36:58.713 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:36:58.716 +09:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2019-02-12 16:36:58.717 +09:00 [DBG] Token validation success
+{"ClientId":null,"ClientName":null,"ValidateLifetime":true,"AccessTokenType":"Jwt","ExpectedScope":"openid","TokenHandle":null,"JwtId":null,"Claims":{"nbf":1549957018,"exp":1549960618,"iss":"http://localhost:5000","aud":["http://localhost:5000/resources","api1"],"client_id":"mvc","sub":"bc588231-24a0-4248-828c-3afa7e0ce847","auth_time":1549957015,"idp":"local","scope":["openid","profile","api1","offline_access"],"amr":"pwd"},"$type":"TokenValidationLog"}
+2019-02-12 16:36:58.724 +09:00 [DBG] Creating userinfo response
+2019-02-12 16:36:58.729 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:36:58.732 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:36:58.735 +09:00 [DBG] Requested claim types: sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at
+2019-02-12 16:36:58.735 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:36:58.739 +09:00 [INF] Profile service returned the following claim types: sub name given_name family_name website preferred_username
+2019-02-12 16:36:58.739 +09:00 [DBG] End userinfo request
+2019-02-12 16:37:13.493 +09:00 [DBG] Request path /connect/userinfo matched to endpoint type Userinfo
+2019-02-12 16:37:13.494 +09:00 [DBG] Endpoint enabled: Userinfo, successfully created handler: IdentityServer4.Endpoints.UserInfoEndpoint
+2019-02-12 16:37:13.494 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2019-02-12 16:37:13.495 +09:00 [DBG] Start userinfo request
+2019-02-12 16:37:13.495 +09:00 [DBG] Bearer token found in header
+2019-02-12 16:37:13.499 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:37:13.500 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:37:13.502 +09:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2019-02-12 16:37:13.502 +09:00 [DBG] Token validation success
+{"ClientId":null,"ClientName":null,"ValidateLifetime":true,"AccessTokenType":"Jwt","ExpectedScope":"openid","TokenHandle":null,"JwtId":null,"Claims":{"nbf":1549957018,"exp":1549960618,"iss":"http://localhost:5000","aud":["http://localhost:5000/resources","api1"],"client_id":"mvc","sub":"bc588231-24a0-4248-828c-3afa7e0ce847","auth_time":1549957015,"idp":"local","scope":["openid","profile","api1","offline_access"],"amr":"pwd"},"$type":"TokenValidationLog"}
+2019-02-12 16:37:13.503 +09:00 [DBG] Creating userinfo response
+2019-02-12 16:37:13.503 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:37:13.503 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:37:13.503 +09:00 [DBG] Requested claim types: sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at
+2019-02-12 16:37:13.503 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:37:13.506 +09:00 [INF] Profile service returned the following claim types: sub name given_name family_name website preferred_username
+2019-02-12 16:37:13.506 +09:00 [DBG] End userinfo request
+2019-02-12 16:37:13.697 +09:00 [DBG] Request path /connect/userinfo matched to endpoint type Userinfo
+2019-02-12 16:37:13.699 +09:00 [DBG] Endpoint enabled: Userinfo, successfully created handler: IdentityServer4.Endpoints.UserInfoEndpoint
+2019-02-12 16:37:13.699 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2019-02-12 16:37:13.700 +09:00 [DBG] Start userinfo request
+2019-02-12 16:37:13.701 +09:00 [DBG] Bearer token found in header
+2019-02-12 16:37:13.719 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:37:13.720 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:37:13.724 +09:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2019-02-12 16:37:13.724 +09:00 [DBG] Token validation success
+{"ClientId":null,"ClientName":null,"ValidateLifetime":true,"AccessTokenType":"Jwt","ExpectedScope":"openid","TokenHandle":null,"JwtId":null,"Claims":{"nbf":1549957018,"exp":1549960618,"iss":"http://localhost:5000","aud":["http://localhost:5000/resources","api1"],"client_id":"mvc","sub":"bc588231-24a0-4248-828c-3afa7e0ce847","auth_time":1549957015,"idp":"local","scope":["openid","profile","api1","offline_access"],"amr":"pwd"},"$type":"TokenValidationLog"}
+2019-02-12 16:37:13.725 +09:00 [DBG] Creating userinfo response
+2019-02-12 16:37:13.725 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:37:13.725 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:37:13.726 +09:00 [DBG] Requested claim types: sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at
+2019-02-12 16:37:13.726 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:37:13.729 +09:00 [INF] Profile service returned the following claim types: sub name given_name family_name website preferred_username
+2019-02-12 16:37:13.729 +09:00 [DBG] End userinfo request
+2019-02-12 16:38:12.032 +09:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-02-12 16:38:12.032 +09:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-02-12 16:38:12.032 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-02-12 16:38:12.033 +09:00 [DBG] Start discovery request
+2019-02-12 16:38:12.180 +09:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2019-02-12 16:38:12.180 +09:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2019-02-12 16:38:12.180 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2019-02-12 16:38:12.181 +09:00 [DBG] Start key discovery request
+2019-02-12 16:41:17.974 +09:00 [DBG] Request path /connect/userinfo matched to endpoint type Userinfo
+2019-02-12 16:41:17.980 +09:00 [DBG] Endpoint enabled: Userinfo, successfully created handler: IdentityServer4.Endpoints.UserInfoEndpoint
+2019-02-12 16:41:17.980 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2019-02-12 16:41:17.981 +09:00 [DBG] Start userinfo request
+2019-02-12 16:41:17.981 +09:00 [DBG] Bearer token found in header
+2019-02-12 16:41:17.987 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:41:17.988 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:41:17.999 +09:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2019-02-12 16:41:18.000 +09:00 [DBG] Token validation success
+{"ClientId":null,"ClientName":null,"ValidateLifetime":true,"AccessTokenType":"Jwt","ExpectedScope":"openid","TokenHandle":null,"JwtId":null,"Claims":{"nbf":1549957018,"exp":1549960618,"iss":"http://localhost:5000","aud":["http://localhost:5000/resources","api1"],"client_id":"mvc","sub":"bc588231-24a0-4248-828c-3afa7e0ce847","auth_time":1549957015,"idp":"local","scope":["openid","profile","api1","offline_access"],"amr":"pwd"},"$type":"TokenValidationLog"}
+2019-02-12 16:41:18.001 +09:00 [DBG] Creating userinfo response
+2019-02-12 16:41:18.001 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:41:18.001 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:41:18.001 +09:00 [DBG] Requested claim types: sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at
+2019-02-12 16:41:18.002 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:41:18.006 +09:00 [INF] Profile service returned the following claim types: sub name given_name family_name website preferred_username
+2019-02-12 16:41:18.007 +09:00 [DBG] End userinfo request
+2019-02-12 16:42:34.513 +09:00 [DBG] Request path /connect/userinfo matched to endpoint type Userinfo
+2019-02-12 16:42:34.514 +09:00 [DBG] Endpoint enabled: Userinfo, successfully created handler: IdentityServer4.Endpoints.UserInfoEndpoint
+2019-02-12 16:42:34.514 +09:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2019-02-12 16:42:34.514 +09:00 [DBG] Start userinfo request
+2019-02-12 16:42:34.515 +09:00 [DBG] Bearer token found in header
+2019-02-12 16:42:34.523 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:42:34.523 +09:00 [DBG] client configuration validation for client mvc succeeded.
+2019-02-12 16:42:34.525 +09:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2019-02-12 16:42:34.526 +09:00 [DBG] Token validation success
+{"ClientId":null,"ClientName":null,"ValidateLifetime":true,"AccessTokenType":"Jwt","ExpectedScope":"openid","TokenHandle":null,"JwtId":null,"Claims":{"nbf":1549957018,"exp":1549960618,"iss":"http://localhost:5000","aud":["http://localhost:5000/resources","api1"],"client_id":"mvc","sub":"bc588231-24a0-4248-828c-3afa7e0ce847","auth_time":1549957015,"idp":"local","scope":["openid","profile","api1","offline_access"],"amr":"pwd"},"$type":"TokenValidationLog"}
+2019-02-12 16:42:34.526 +09:00 [DBG] Creating userinfo response
+2019-02-12 16:42:34.526 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:42:34.526 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:42:34.526 +09:00 [DBG] Requested claim types: sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at
+2019-02-12 16:42:34.526 +09:00 [DBG] Scopes in access token: openid profile api1 offline_access
+2019-02-12 16:42:34.528 +09:00 [INF] Profile service returned the following claim types: sub name given_name family_name website preferred_username
+2019-02-12 16:42:34.528 +09:00 [DBG] End userinfo request

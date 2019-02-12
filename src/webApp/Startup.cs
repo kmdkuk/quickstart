@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Threading.Tasks;
+using IdentityServer4;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Hosting;
@@ -48,6 +49,8 @@ namespace webApp
                     options.SaveTokens = true;
                     options.GetClaimsFromUserInfoEndpoint = true;
 
+                    options.Scope.Add(IdentityServerConstants.StandardScopes.OpenId);
+                    options.Scope.Add(IdentityServerConstants.StandardScopes.Profile);
                     options.Scope.Add("api1");
                     options.Scope.Add("offline_access");
                 });

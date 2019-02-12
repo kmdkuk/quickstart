@@ -36,6 +36,20 @@ namespace webApp.Controllers
             return SignOut("Cookies", "oidc");
         }
 
+        public async Task<IActionResult> Userinfo()
+        {
+            var accessToken = await HttpContext.GetTokenAsync("access_token");
+
+            var client = new HttpClient();
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
+            var content = await client.GetStringAsync("http://localhost:5000/connect/userinfo");
+            Console.WriteLine("------");
+            Console.WriteLine(content);
+            Console.WriteLine("------");
+            ViewBag.Json = content;
+            return View("json");
+        }
+
         public async Task<IActionResult> CallApi()
         {
             var accessToken = await HttpContext.GetTokenAsync("access_token");
@@ -43,8 +57,10 @@ namespace webApp.Controllers
             var client = new HttpClient();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
             var content = await client.GetStringAsync("http://localhost:5001/identity");
-
-            ViewBag.Json = JArray.Parse(content).ToString();
+            Console.WriteLine("------");
+            Console.WriteLine(content);
+            Console.WriteLine("------");
+            ViewBag.Json = JArray.Parse(content.ToString()).ToString();
             return View("json");
         }
 
