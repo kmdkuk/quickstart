@@ -15,6 +15,7 @@ using System.Reflection;
 using System.Linq;
 using IdentityServer4.EntityFramework.DbContexts;
 using IdentityServer4.EntityFramework.Mappers;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
 namespace IdentityServerAspNetIdentity
 {
@@ -40,7 +41,23 @@ namespace IdentityServerAspNetIdentity
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
-            services.AddMvc().SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_2_1);
+            services.AddMvc().SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_2_2)
+                .AddRazorPagesOptions(options =>
+                {
+                    options.AllowAreas = true;
+                    options.Conventions.AuthorizeAreaFolder("Identity", "/Account/Manage");
+                    options.Conventions.AuthorizeAreaPage("Identity", "/Account/Logout");
+                });
+
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = $"/Account/Login";
+                options.LogoutPath = $"/Account/Logout";
+                options.AccessDeniedPath = $"/Account/AccessDenied";
+            });
+
+            // using Microsoft.AspNetCore.Identity.UI.Services;
+            services.AddSingleton<IEmailSender, EmailSender>();
 
             services.Configure<IISOptions>(iis =>
             {
